@@ -3,6 +3,7 @@
 import { cn } from "@/app/lib/utils/cn";
 import { skillsData } from "@/data";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { ShineBorder } from "./ShineBorder";
 
 export const InfiniteMovingCards = ({
@@ -93,9 +94,8 @@ const ScrollingSkillsSection = ({
           )}
         >
           {skills.map((skill) => (
-            <ShineBorder className="relative rounded-2xl border">
+            <ShineBorder key={`${category}-${skill.name}`} className="relative rounded-2xl border">
             <li
-              key={`${category}-${skill.name}`}
               className="w-[100px] sm:w-[200px] md:w-[220px] lg:w-[250px] max-w-full flex flex-col items-center text-center relative rounded-2xl border border-slate-700 px-4 py-4"
               style={{
                 background:
@@ -104,7 +104,7 @@ const ScrollingSkillsSection = ({
             >
               {skill.icon && (
                 <div className="items-center justify-center">
-                  <img src={skill.icon} alt={skill.name} className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain" />
+                  <Image src={skill.icon} alt={skill.name} width={80} height={80} className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain" />
                 </div>
               )}
               <blockquote className="flex items-center">

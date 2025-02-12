@@ -51,7 +51,7 @@ function Projects() {
                             className="border rounded-full bg-gradient-to-r from-[#04071D] to-[#0C0E23] lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                             style={{ transform: `translateX(-${5 * index + 2}px)` }}
                           >
-                            <img src={icon} alt="icon5" className="p-2" />
+                            <Image src={icon} alt="icon" width={32} height={32} className="p-2" />
                           </div>
                         ))}
                       </div>
