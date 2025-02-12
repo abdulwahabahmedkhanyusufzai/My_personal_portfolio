@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { cn } from "@/app/lib/utils/cn";
@@ -5,6 +6,7 @@ import { skillsData } from "@/data";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { ShineBorder } from "./ShineBorder";
+import { JSX } from "react/jsx-runtime";
 
 export const InfiniteMovingCards = ({
   direction = "left",
@@ -39,7 +41,7 @@ const ScrollingSkillsSection = ({
   className,
 }: {
   category: string;
-  skills: { name: string; level: string; icon?: JSX.Element }[];
+  skills: { name: string; level: string; icon?: string }[];
   direction: "left" | "right";
   pauseOnHover: boolean;
   className?: string;
@@ -104,7 +106,7 @@ const ScrollingSkillsSection = ({
             >
               {skill.icon && (
                 <div className="items-center justify-center">
-                  <Image src={skill.icon} alt={skill.name} width={80} height={80} className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain" />
+                  <Image src={skill.icon as string} alt={skill.name} width={80} height={80} className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain" />
                 </div>
               )}
               <blockquote className="flex items-center">
