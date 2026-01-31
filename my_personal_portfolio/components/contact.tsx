@@ -271,7 +271,7 @@ function Contact() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-[#A07CFE] to-[#da4478] text-white py-3 px-4 rounded-[12px] shadow focus:outline-none"
+              className="w-full bg-blue-100 text-blue-900 border border-blue-200 dark:border-none dark:bg-gradient-to-r dark:from-[#A07CFE] dark:to-[#da4478] dark:text-white py-3 px-4 rounded-[12px] shadow focus:outline-none"
             >
               {isSubmitting ? (
                 <>
