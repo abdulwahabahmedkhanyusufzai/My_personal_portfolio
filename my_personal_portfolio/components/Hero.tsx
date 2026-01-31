@@ -58,7 +58,7 @@ const Hero = () => {
                 position="right"
               />
             </a>
-            <a href="https://drive.google.com/file/d/1CyfyVlM4A008byVWlUAPyW-6JWWo712t/view?usp=sharing">
+            <a href="https://drive.google.com/file/d/1LNW7oXhj1-IqjHJQ510Ge85FPOI8_Zm6/view?usp=sharing">
               <MagicButton
                 title="Download Resume"
                 icon={<FaLocationArrow />}
