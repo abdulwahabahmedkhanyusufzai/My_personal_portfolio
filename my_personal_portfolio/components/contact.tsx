@@ -39,7 +39,7 @@ function Contact() {
       <GradualSpacing text="Contact me" className="my-10" />
       <div className="flex gap-5 justify-around flex-col-reverse sm:flex-row">
         <div className="mt-5">
-          <h1 className="text-xl sm:text-5xl mb-5 dark:text-white-100 font-bold tracking-tight">
+          <h1 className="text-xl sm:text-5xl mb-5 text-black dark:text-white-100 font-bold tracking-tight">
             Send Us a Note and Initiate the Dialogue!
           </h1>
           <p className="text-normal text-sm sm:text-lg font-medium text-gray-600 dark:text-gray-400 mt-2">
@@ -143,7 +143,7 @@ function Contact() {
               <div className="flex-1 w-full">
                 <label
                   htmlFor="firstName"
-                  className="block text-sm font-medium text-[#A07CFE]"
+                  className="block text-sm font-medium text-purple-700 dark:text-[#A07CFE]"
                 >
                   First Name
                 </label>
@@ -164,7 +164,7 @@ function Contact() {
               <div className="flex-1 w-full">
                 <label
                   htmlFor="lastName"
-                  className="block text-sm font-medium text-[#A07CFE]"
+                  className="block text-sm font-medium text-purple-700 dark:text-[#A07CFE]"
                 >
                   Last Name
                 </label>
@@ -186,7 +186,7 @@ function Contact() {
               <div className="flex-1 w-full">
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-[#A07CFE]"
+                  className="block text-sm font-medium text-purple-700 dark:text-[#A07CFE]"
                 >
                   Email
                 </label>
@@ -207,7 +207,7 @@ function Contact() {
               <div className="flex-1 w-full">
                 <label
                   htmlFor="phoneNumber"
-                  className="block text-sm font-medium text-[#A07CFE]"
+                  className="block text-sm font-medium text-purple-700 dark:text-[#A07CFE]"
                 >
                   Phone Number
                 </label>
@@ -229,7 +229,7 @@ function Contact() {
             <div>
               <label
                 htmlFor="subject"
-                className="block text-sm font-medium text-[#A07CFE]"
+                className="block text-sm font-medium text-purple-700 dark:text-[#A07CFE]"
               >
                 Subject
               </label>
@@ -250,7 +250,7 @@ function Contact() {
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-[#A07CFE]"
+                className="block text-sm font-medium text-purple-700 dark:text-[#A07CFE]"
               >
                 Message
               </label>

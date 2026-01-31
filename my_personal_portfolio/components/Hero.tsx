@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="pb-20 pt-36">
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
+          <p className="uppercase tracking-widest text-xs text-center text-blue-700 dark:text-blue-100 max-w-80">
             Crafting High-Performance Web & AI Solutions
           </p>
 
@@ -15,7 +15,7 @@ const Hero = () => {
             Building Scalable Digital Experiences with Modern Tech
           </h1>
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl pt-4 text-white-100 font-light">
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl pt-4 text-black dark:text-white-100 font-light">
             Hi! I&apos;m Abdul Wahab, a Junior Software Engineer & Open Source Contributor.
           </p>
           <div className="flex gap-5 mt-5 md:mt-0 ">
