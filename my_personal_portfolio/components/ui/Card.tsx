@@ -4,15 +4,10 @@
 
 import { cn } from "@/app/lib/utils/cn";
 
-export interface MagicCardProps extends React.HTMLAttributes<HTMLDivElement> {
-
-}
-
 export function MagicCard({
   children,
   className,
-
-}: MagicCardProps) {
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={cn(

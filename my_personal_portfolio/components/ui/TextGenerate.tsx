@@ -1,6 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
-import { useEffect } from "react";
+
 import { cn } from "@/app/lib/utils/cn";
 
 export const TextGenerateEffect = ({
