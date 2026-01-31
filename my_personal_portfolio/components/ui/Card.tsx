@@ -5,17 +5,13 @@
 import { cn } from "@/app/lib/utils/cn";
 
 export interface MagicCardProps extends React.HTMLAttributes<HTMLDivElement> {
-  gradientSize?: number;
-  gradientColor?: string;
-  gradientOpacity?: number;
+
 }
 
 export function MagicCard({
   children,
   className,
-  gradientSize = 200,
-  gradientColor = "#0E162B",
-  gradientOpacity = 0.8,
+
 }: MagicCardProps) {
   return (
     <div
