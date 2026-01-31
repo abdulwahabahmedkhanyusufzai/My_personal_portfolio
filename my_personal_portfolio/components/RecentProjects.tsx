@@ -59,12 +59,12 @@ function Projects() {
                       {/* Conditionally render Links only if they exist */}
                       <div className="flex items-center gap-4 text-gray-800 dark:text-white-100 text-xs sm:text-lg">
                         {project.link && (
-                          <Link href={project.link} className="flex items-center gap-1 hover:text-purple">
+                          <Link href={project.link} className="flex items-center gap-1 hover:text-blue">
                             GitHub <FaLocationArrow />
                           </Link>
                         )}
                         {project.link && (
-                          <Link href={project.link} className="flex items-center gap-1 hover:text-purple">
+                          <Link href={project.link} className="flex items-center gap-1 hover:text-blue">
                             Demo <FaLocationArrow />
                           </Link>
                         )}

@@ -53,7 +53,7 @@ const Experience = () => {
                                 <h1 className="text-xl md:text-2xl font-bold">
                                     {item.project}
                                 </h1>
-                                <p className="text-sm font-semibold text-purple-500">
+                                <p className="text-sm font-semibold text-blue">
                                     {item.role}
                                 </p>
                                 <div className="flex flex-col gap-2 mt-2">

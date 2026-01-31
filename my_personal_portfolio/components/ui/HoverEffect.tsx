@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/app/lib/utils/cn";
-import { AnimatePresence, motion } from "framer-motion";
+
 import { useState } from "react";
 import Image from "next/image";
 
@@ -28,27 +28,16 @@ export const HoverEffect = ({
             {items.map((item, idx) => (
                 <div
                     key={item?.name + idx}
-                    className="relative group  block p-2 h-full w-full"
+                    className="relative group block p-2 h-full w-full"
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 >
-                    <AnimatePresence>
-                        {hoveredIndex === idx && (
-                            <motion.span
-                                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
-                                layoutId="hoverBackground"
-                                initial={{ opacity: 0 }}
-                                animate={{
-                                    opacity: 1,
-                                    transition: { duration: 0.15 },
-                                }}
-                                exit={{
-                                    opacity: 0,
-                                    transition: { duration: 0.15, delay: 0.2 },
-                                }}
-                            />
+                    <span
+                        className={cn(
+                            "absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl transition-opacity duration-150",
+                            hoveredIndex === idx ? "opacity-100" : "opacity-0"
                         )}
-                    </AnimatePresence>
+                    />
                     <div className="relative z-20 w-full p-4 rounded-2xl border border-gray-100 dark:border-white/[0.2] bg-white dark:bg-black group-hover:border-transparent dark:group-hover:border-transparent transition-colors duration-200 shadow-sm">
                         <div className="flex flex-col items-center justify-center gap-4">
                             <div className="p-2 rounded-full bg-gray-100 dark:bg-slate-900">

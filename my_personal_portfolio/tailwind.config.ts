@@ -36,8 +36,8 @@ const config = {
         },
         blue: {
           "100": "#E4ECFF",
+          DEFAULT: "#3B82F6", // Replacing purple with a standard Blue
         },
-        purple: "#CBACF9",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -9,7 +9,7 @@ function Footer() {
       <footer className="w-full pt-20 pb-10 container z-10" id="contact">
         <div className="flex flex-col items-center">
           <h1 className="heading lg:max-w-[45vw]">
-            Ready to take <span className="text-purple">your</span> digital
+            Ready to take <span className="text-blue">your</span> digital
             presence to the next level?
           </h1>
           <p className="text-gray-700 dark:text-white-200  my-3 md:mt-10 text-center">
