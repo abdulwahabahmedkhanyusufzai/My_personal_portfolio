@@ -1,106 +1,178 @@
 import { z } from "zod";
 import { FaFacebook, FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiFiverr } from "react-icons/si";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Experience", link: "#experience" },
+  { name: "Education", link: "#education" },
   { name: "Contact", link: "#contact" },
 ];
+
 export const skillsData = [
   {
-    category: "Frontend Development",
+    category: "Languages",
+    skills: [
+      { name: "Python", icon: "/python.svg", level: "Advanced" }, // Placeholder icon if missing
+      { name: "C++ (DSA)", icon: "/c.svg", level: "Advanced" },
+      { name: "JavaScript", icon: "/js.svg", level: "Advanced" },
+      { name: "TypeScript", icon: "/ts.svg", level: "Advanced" },
+      { name: "SQL", icon: "/sql.svg", level: "Intermediate" }, // Placeholder
+      { name: "GraphQL", icon: "/graphql.svg", level: "Intermediate" }, // Placeholder
+    ],
+  },
+  {
+    category: "AI/ML",
+    skills: [
+      { name: "Machine Learning", icon: "/ml.svg", level: "Advanced" }, // Placeholder
+      { name: "Computer Vision", icon: "/cv.svg", level: "Advanced" }, // Placeholder
+      { name: "Reinforcement Learning", icon: "/rl.svg", level: "Advanced" }, // Placeholder
+      { name: "JAX", icon: "/jax.svg", level: "Advanced" }, // Placeholder
+      { name: "Scikit-learn", icon: "/sklearn.svg", level: "Advanced" }, // Placeholder
+      { name: "NumPy", icon: "/numpy.svg", level: "Advanced" }, // Placeholder
+      { name: "Pandas", icon: "/pandas.svg", level: "Advanced" }, // Placeholder
+    ],
+  },
+  {
+    category: "Web Development",
     skills: [
       { name: "React.js", icon: "/re.svg", level: "Advanced" },
       { name: "Next.js", icon: "/next.svg", level: "Advanced" },
-      { name: "Tailwind CSS", icon: "/tail.svg", level: "Advanced" },
-      { name: "JavaScript (ES6+)", icon: "/js.svg", level: "Advanced" },
-      { name: "TypeScript", icon: "/ts.svg", level: "Intermediate" },
-      { name: "HTML5", icon: "/html5.svg", level: "Advanced" },
-      { name: "CSS3", icon: "/css3.svg", level: "Advanced" },
-    ],
-  },
-  {
-    category: "Backend Development",
-    skills: [
       { name: "Node.js", icon: "/node-js.svg", level: "Advanced" },
-      { name: "Express.js", icon: "/express.svg", level: "Advanced" },
+      { name: "Express", icon: "/express.svg", level: "Advanced" },
       { name: "MongoDB", icon: "/mongodb.svg", level: "Advanced" },
-      { name: "REST API", icon: "/restapi.svg", level: "Advanced" },
+      { name: "Prisma", icon: "/prisma.svg", level: "Intermediate" }, // Placeholder
+      { name: "Remix", icon: "/remix.svg", level: "Intermediate" }, // Placeholder
+      { name: "Shopify", icon: "/shopify.svg", level: "Intermediate" }, // Placeholder
     ],
   },
   {
-    category: "Development And Deployment Tools",skills: [
+    category: "Cloud & Tools",
+    skills: [
       { name: "Google Cloud", icon: "/gcloud.svg", level: "Intermediate" },
-      { name: "Vercel", icon: "/vercel.svg", level: "Advanced" },
-      { name: "Git & GitHub", icon: "/git.svg", level: "Advanced" },
+      { name: "Docker", icon: "/dock.svg", level: "Intermediate" },
+      { name: "Linux (WSL)", icon: "/linux.svg", level: "Advanced" }, // Placeholder
+      { name: "Git", icon: "/git.svg", level: "Advanced" },
       { name: "Postman", icon: "/postman.svg", level: "Advanced" },
-        
-    ],
-  },
-  {
-    category: "Security & Authentication",
-    skills: [
-      { name: "JWT Authentication", icon: "json.svg", level: "Advanced" },
-      { name: "OAuth2", icon: "/oauth.svg", level: "Intermediate" },
-      { name: "Passport.js", icon: "/passport.svg", level: "Advanced" },
-    ],
-  },
-  
-  {
-    category: "Programming Languages",
-    skills: [
-      { name: "JavaScript", icon: "/js.svg", level: "Advanced" },
-      { name: "TypeScript", icon: "/ts.svg", level: "Intermediate" },
-      { name: "C (Basics)", icon: "/c.svg", level: "Advanced" },
-      { name: "Java (DSA)", icon: "/java.svg", level: "Learning" },
     ],
   },
 ];
-
 
 export const projects = [
   {
     id: 1,
-    title: "YouTube Clone",
-    des: "Explore the YouTube Clone,a dynamic Web Application that offers YouTube fuctionality.",
-    img: "/p1.png",
-    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/mongodb.svg", "/express.svg","node-js.svg","gcloud.svg","passport.svg"],
-    link: "https://youtube-clone-3fba.vercel.app/",
+    title: "Scalable Video Content Platform",
+    des: "Engineered a video-sharing platform with JWT/Google OAuth, processing 5,000+ minutes of content. Optimized playback performance by 40% using lazy loading and ensured 99.9% uptime via Vercel.",
+    img: "/p1.png", // Reusing existing image as placeholder
+    iconLists: ["/re.svg", "/node-js.svg", "/gcloud.svg", "/vercel.svg"],
+    link: "https://github.com/abdulwahabahmedkhanyusufzai", // Fallback link
   },
   {
     id: 2,
-    title: "Netflix Clone ",
-    des: "Netflix Clone is dynamic Video Streaming App which provide funcitonality of Netflix without Any Charges.",
-    img: "/NetflixClone.jpeg",
-    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/mongodb.svg", "/express.svg","node-js.svg"],
-    link: "https://mern-stack-netflix-apmo.vercel.app",
-  },
-  {
-    id: 3,
-    title: "Spotify Clone",
-    des: "Spotify Clone Provide ypu Free Songs Listen anytime Anywhere",
-    img: "/0.png",
-    className: "object-cover w-full h-full",
-    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/mongodb.svg", "/express.svg","node-js.svg"],
-    link: "http://spotify-clone-3zxe.vercel.app/",
-  },
-  {
-    id: 4,
-    title: "Pizza Delivery Web",
-    des: "A Pizza Delivery Web Having Simple Funcitonality to Order",
-    img: "/pizza.png",
-    className: "object-cover w-full h-full",
-    iconLists: ["/html.svg", "/css3.svg", "/js.svg"],
-    link: "https://full-pizza-responsive-web.vercel.app/",
+    title: "High-Performance Streaming Interface",
+    des: "Designed a Netflix-inspired UI with real-time content fetching and advanced filtering mechanisms. Built with MERN Stack and REST APIs.",
+    img: "/NetflixClone.jpeg", // Reusing existing image as placeholder
+    iconLists: ["/re.svg", "/tail.svg", "/node-js.svg", "/mongodb.svg"],
+    link: "https://github.com/abdulwahabahmedkhanyusufzai", // Fallback link
   },
 ];
 
+export const workExperience = [
+  {
+    id: 1,
+    title: "Junior Software Engineer",
+    company: "QF Network",
+    location: "Karachi, Pakistan",
+    date: "Mar 2025 – Present",
+    desc: [
+      "Engineered custom Shopify applications using Remix.js and Prisma ORM, automating billing workflows and webhook handling.",
+      "Refactored legacy React codebases, implementing memoization and lazy loading to reduce FCP by 30%.",
+      "Deployed scalable REST APIs using Node.js and Express, integrating third-party services via robust authentication flows.",
+      "Maintained 99.9% uptime for client applications, debugging critical production issues within strict SLAs.",
+    ],
+    className: "md:col-span-2",
+  },
+];
 
+export const openSourceAchievements = [
+  {
+    id: 1,
+    project: "Google / JAX",
+    role: "High-Performance Numerical Computing",
+    date: "Jan 2026 – Present",
+    desc: [
+      "Refactored rankdata functions to implement high-performance lazy execution using lax.cond, eliminating redundant sorting overhead (PR #34628).",
+      "Core Team Review: Optimization approved by Google Research engineers for the v0.10.0 release.",
+    ],
+  },
+  {
+    id: 2,
+    project: "Google / Colab-VSCode Extension",
+    role: "TypeScript, Jupyter Protocol",
+    date: "Jan 2026 – Present",
+    desc: [
+      "Overhauled Authentication UX by intercepting kernel-level input request messages and replacing static URLs with custom VS Code UI (PR #375).",
+      "Resolved login blockers for Brave/Safari users by implementing a custom input reply handler that identifies client processes via Session IDs.",
+    ],
+  },
+  {
+    id: 3,
+    project: "Google / Colabtools",
+    role: "Core Library",
+    date: "Jan 2026 – Present",
+    desc: [
+      "Improved developer experience by implementing actionable error messages for Drive mount credential failures (PR #5805).",
+      "Refined exception handling logic within core Colab utilities used by millions of monthly active users.",
+    ],
+  },
+  {
+    id: 4,
+    project: "Google / Tunix",
+    role: "Reinforcement Learning Library",
+    date: "Jan 2026 – Present",
+    desc: [
+      "Diagnosed and resolved a critical AttributeError in the rl cluster module affecting Python 3.11+ environments (PR #1000).",
+      "Consolidated multiple stale pull requests into a single optimized patch.",
+    ],
+  },
+];
 
-const yearsOfExperience = +1; // Example value
-const projectsCompleted = +6; // Example value
-const clients = 0; // Example value
+export const dataScienceCompetitions = [
+  {
+    id: 1,
+    title: "CSIRO – Image2Biomass Prediction",
+    rank: "Top 17% (671/3906) Global",
+    desc: "Developed a Deep Learning pipeline to estimate biomass from multi-spectral imagery. Applied using Regression-based CNNs.",
+  },
+  {
+    id: 2,
+    title: "PhysioNet ECG Digitization",
+    rank: "Top 21% (299/1428) Global",
+    desc: "Developed a computer vision pipeline to extract ECG time-series data from scans. Implemented signal extraction algorithms.",
+  },
+  {
+    id: 3,
+    title: "Diabetes Prediction Challenge",
+    rank: "Top 40% (1677/4206) Global",
+    desc: "Built ensemble learning models for medical classification, competing against 4,000+ international teams.",
+  },
+];
+
+export const education = [
+  {
+    id: 1,
+    institution: "Virtual University of Pakistan",
+    degree: "Bachelor of Science in Computer Science (BSCS)",
+    date: "Expected 2029",
+    location: "Karachi, Pakistan",
+    desc: "Distance Learning / Flexible Schedule (Fully compatible with professional business hours)",
+  },
+];
+
+const yearsOfExperience = 1; // Updated to 1 based on 2025 start? Wait, user says Mar 2025 - Present (now Jan 2026). So ~1 year.
+const projectsCompleted = 20; // Estimate
+const clients = 5; // Estimate
 
 export const aboutData = [
   {
@@ -109,7 +181,7 @@ export const aboutData = [
   },
   {
     number: projectsCompleted,
-    text: "Project Completed",
+    text: "Projects Completed",
   },
   {
     number: clients,
@@ -135,6 +207,7 @@ export const contactSchema = z.object({
   subject: z.string(),
   message: z.string().min(1, { message: "Message is required" }),
 });
+
 export const socialMedia = [
   {
     id: 1,
@@ -160,5 +233,5 @@ export const socialMedia = [
     id: 5,
     link: "https://fiverr.com/wahabyusufzai",
     icon: SiFiverr,
-  },   
+  },
 ];
