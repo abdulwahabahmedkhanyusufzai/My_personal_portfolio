@@ -4,7 +4,7 @@ import MagicButton from "@/components/ui/MagicButton";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import { TextGenerateEffect } from "@/components/ui/TextGenerate";
 import { AnimatedGridPattern } from "./ui/AnimatedgridBg";
-import {cn} from "@/app/lib/utils/cn";
+import { cn } from "@/app/lib/utils/cn";
 const Hero = () => {
   return (
     <div className="pb-20 pt-36">
@@ -12,11 +12,11 @@ const Hero = () => {
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
        */}
-        <div>
+      <div>
         <Spotlight
           className="-top-[1200px] left-0 md:left-[16%] md:-top-[15%]"
           fill="white"
-          
+
         />
       </div>
       {/**
@@ -33,9 +33,9 @@ const Hero = () => {
           "w-[80%] h-[90vh] absolute top-0 left-1/2 transform -translate-x-1/2"
         )}
       />
-       <div className="flex justify-center relative my-20 z-10">
+      <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <p className="uppercase tracking-widest text-sm text-center text-blue-100 max-w-90">
+          <p className="uppercase tracking-widest text-sm text-center text-blue-900 dark:text-blue-100 max-w-90">
             Craftying Digital Experiences with Modern Web Tech
           </p>
           {/**
@@ -51,21 +51,21 @@ const Hero = () => {
             Hi! I&apos;m Abdul Wahab, a Full Stack Developer who use MERN.
           </p>
           <div className="flex gap-5 mt-5 md:mt-0 ">
-          <a href="#about">
-            <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
-          <a href="https://drive.google.com/file/d/1CyfyVlM4A008byVWlUAPyW-6JWWo712t/view?usp=sharing">
-          <MagicButton
-              title="Download Resume"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
+            <a href="#about">
+              <MagicButton
+                title="Show my work"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
             </a>
-            </div>
+            <a href="https://drive.google.com/file/d/1CyfyVlM4A008byVWlUAPyW-6JWWo712t/view?usp=sharing">
+              <MagicButton
+                title="Download Resume"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>

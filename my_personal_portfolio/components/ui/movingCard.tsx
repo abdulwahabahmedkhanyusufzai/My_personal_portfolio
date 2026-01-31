@@ -76,10 +76,10 @@ const ScrollingSkillsSection = ({
 
   return (
     <div>
-      <h3 className="text-lg text-center  sm:text-xl md:text-2xl font-semibold text-gray-300 mb-2">
+      <h3 className="text-lg text-center  sm:text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
         {category}
       </h3>
-      
+
       <div
         ref={containerRef}
         className={cn(
@@ -87,7 +87,7 @@ const ScrollingSkillsSection = ({
           className
         )}
       >
-        
+
         <ul
           ref={scrollerRef}
           className={cn(
@@ -98,32 +98,28 @@ const ScrollingSkillsSection = ({
         >
           {skills.map((skill) => (
             <ShineBorder key={`${category}-${skill.name}`} className="relative rounded-2xl border">
-            <li
-              className="w-[100px] sm:w-[200px] md:w-[220px] lg:w-[250px] max-w-full flex flex-col items-center text-center relative rounded-2xl border border-slate-700 px-4 py-4"
-              style={{
-                background:
-                  "linear-gradient(180deg, var(--slate-800), var(--slate-900))",
-              }}
-            >
-              {skill.icon && (
-                <div className="items-center justify-center">
-                  <Image src={skill.icon as string} alt={skill.name} width={80} height={80} className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain" />
-                </div>
-              )}
-              <blockquote className="flex items-center">
-                <span className="relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">
-                  {skill.name} - {skill.level}
-                </span>
-              </blockquote>
-            </li>
+              <li
+                className="w-[100px] sm:w-[200px] md:w-[220px] lg:w-[250px] max-w-full flex flex-col items-center text-center relative rounded-2xl border border-gray-200 dark:border-slate-700 px-4 py-4 bg-white dark:bg-slate-900"
+              >
+                {skill.icon && (
+                  <div className="items-center justify-center">
+                    <Image src={skill.icon as string} alt={skill.name} width={80} height={80} className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain" />
+                  </div>
+                )}
+                <blockquote className="flex items-center">
+                  <span className="relative z-20 text-sm leading-[1.6] text-gray-800 dark:text-gray-100 font-normal">
+                    {skill.name} - {skill.level}
+                  </span>
+                </blockquote>
+              </li>
             </ShineBorder>
           ))}
-                  
+
 
         </ul>
-        
+
       </div>
-      
+
     </div>
   );
 };

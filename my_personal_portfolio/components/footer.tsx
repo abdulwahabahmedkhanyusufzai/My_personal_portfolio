@@ -12,7 +12,7 @@ function Footer() {
             Ready to take <span className="text-purple">your</span> digital
             presence to the next level?
           </h1>
-          <p className="text-white-200  my-3 md:mt-10 text-center">
+          <p className="text-gray-700 dark:text-white-200  my-3 md:mt-10 text-center">
             Reach out to me today and let&apos;s discuss how I can help you
             achieve your goals.
           </p>
@@ -38,7 +38,7 @@ function Footer() {
                 href={info.link}
                 target="_blank"
                 key={info.id}
-                className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+                className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-gray-200 dark:bg-black-200 rounded-lg border border-gray-300 dark:border-black-300"
               >
                 <info.icon />
               </Link>
@@ -46,7 +46,7 @@ function Footer() {
           </div>
         </div>
       </footer>
-      
+
     </div>
   );
 }

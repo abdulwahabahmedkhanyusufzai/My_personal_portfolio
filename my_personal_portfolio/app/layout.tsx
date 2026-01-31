@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
-const inter = Rubik({subsets: ["latin"]});
+const inter = Rubik({ subsets: ["latin"] });
 
 
 export const metadata: Metadata = {
@@ -20,14 +20,14 @@ export default function RootLayout({
       <body
         className={inter.className}
       >
-  <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>      </body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>      </body>
     </html>
   );
 }

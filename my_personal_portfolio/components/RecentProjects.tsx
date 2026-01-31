@@ -18,7 +18,7 @@ function Projects() {
             {projects.map((project) => (
               <MagicCard key={project.id} className="w-full h-full">
                 <div className="flex flex-col w-full h-full hover:shadow-xl transition-shadow duration-500">
-                  
+
                   {/* Fixed image height */}
                   <div className="relative w-full h-[250px] sm:h-[300px] lg:h-[400px] rounded-lg overflow-hidden">
                     <Image
@@ -28,7 +28,7 @@ function Projects() {
                       height={300}
 
                       priority
-                      
+
                       className="rounded w-full object-cover transform hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -38,7 +38,7 @@ function Projects() {
                     <h2 className="text-2xl font-bold truncate">
                       {project.title}
                     </h2>
-                    <p className="mt-3 text-sm text-white-100 line-clamp-4">
+                    <p className="mt-3 text-sm text-gray-800 dark:text-white-100 line-clamp-4">
                       {project.des}
                     </p>
 
@@ -57,7 +57,7 @@ function Projects() {
                       </div>
 
                       {/* Conditionally render Links only if they exist */}
-                      <div className="flex items-center gap-4 text-white-100 text-xs sm:text-lg">
+                      <div className="flex items-center gap-4 text-gray-800 dark:text-white-100 text-xs sm:text-lg">
                         {project.link && (
                           <Link href={project.link} className="flex items-center gap-1 hover:text-purple">
                             GitHub <FaLocationArrow />

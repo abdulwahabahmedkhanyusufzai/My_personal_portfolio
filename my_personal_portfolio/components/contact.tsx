@@ -137,7 +137,7 @@ function Contact() {
         >
           <form
             onSubmit={handleSubmit(handleContact)}
-            className="space-y-4 w-full p-8 rounded-sm bg-[#0E162B] text-gray-50"
+            className="space-y-4 w-full p-8 rounded-sm bg-white/50 dark:bg-[#0E162B] text-gray-800 dark:text-gray-50"
           >
             <div className="flex gap-5 items-center justify-center flex-col sm:flex-row">
               <div className="flex-1 w-full">
@@ -152,7 +152,7 @@ function Contact() {
                   type="text"
                   placeholder="Ex. Abdul Wahab"
                   {...register("firstName")}
-                  className="mt-1 block w-full px-4 py-3 rounded-[10px] bg-black-100 shadow-sm focus:outline-none sm:text-sm"
+                  className="mt-1 block w-full px-4 py-3 rounded-[10px] bg-gray-100 dark:bg-black-100 border border-gray-300 dark:border-transparent text-gray-900 dark:text-white shadow-sm focus:outline-none sm:text-sm"
                 />
                 {errors?.firstName && (
                   <p className="text-red-500 text-sm mt-1">
@@ -173,7 +173,7 @@ function Contact() {
                   type="text"
                   placeholder="Ex. Ahmed Khan"
                   {...register("lastName")}
-                  className="mt-1 block w-full px-4 py-3 rounded-[10px] bg-black-100 shadow-sm focus:outline-none sm:text-sm"
+                  className="mt-1 block w-full px-4 py-3 rounded-[10px] bg-gray-100 dark:bg-black-100 border border-gray-300 dark:border-transparent text-gray-900 dark:text-white shadow-sm focus:outline-none sm:text-sm"
                 />
                 {errors?.lastName && (
                   <p className="text-red-500 text-sm mt-1">
@@ -195,7 +195,7 @@ function Contact() {
                   type="email"
                   placeholder="Ex. absurw@example.com"
                   {...register("email")}
-                  className="mt-1 block w-full px-4 py-3 rounded-[10px] bg-black-100 shadow-sm focus:outline-none sm:text-sm"
+                  className="mt-1 block w-full px-4 py-3 rounded-[10px] bg-gray-100 dark:bg-black-100 border border-gray-300 dark:border-transparent text-gray-900 dark:text-white shadow-sm focus:outline-none sm:text-sm"
                 />
                 {errors && errors?.email && (
                   <p className="text-red-500 text-sm mt-1">
@@ -216,7 +216,7 @@ function Contact() {
                   type="text"
                   placeholder="Ex. +923428320022"
                   {...register("phoneNumber")}
-                  className="mt-1 block w-full px-4 py-3 rounded-[10px] bg-black-100 shadow-sm focus:outline-none sm:text-sm"
+                  className="mt-1 block w-full px-4 py-3 rounded-[10px] bg-gray-100 dark:bg-black-100 border border-gray-300 dark:border-transparent text-gray-900 dark:text-white shadow-sm focus:outline-none sm:text-sm"
                 />
                 {errors && errors?.phoneNumber && (
                   <p className="text-red-500 text-sm mt-1">
@@ -238,7 +238,7 @@ function Contact() {
                 type="text"
                 placeholder="Ex. Message Title"
                 {...register("subject")}
-                className="mt-1 block w-full px-4 py-3 rounded-[10px] bg-black-100 shadow-sm focus:outline-none sm:text-sm"
+                className="mt-1 block w-full px-4 py-3 rounded-[10px] bg-gray-100 dark:bg-black-100 border border-gray-300 dark:border-transparent text-gray-900 dark:text-white shadow-sm focus:outline-none sm:text-sm"
               />
               {errors && errors?.subject && (
                 <p className="text-red-500 text-sm mt-1">
@@ -259,7 +259,7 @@ function Contact() {
                 rows={6}
                 placeholder="Ex. Hello, I'd like to work with you!"
                 {...register("message")}
-                className="mt-1 block w-full px-4 py-3 rounded-[10px] bg-black-100 shadow-sm focus:outline-none sm:text-sm"
+                className="mt-1 block w-full px-4 py-3 rounded-[10px] bg-gray-100 dark:bg-black-100 border border-gray-300 dark:border-transparent text-gray-900 dark:text-white shadow-sm focus:outline-none sm:text-sm"
               />
               {errors && errors?.message && (
                 <p className="text-red-500 text-sm mt-1">
