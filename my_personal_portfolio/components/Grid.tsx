@@ -16,7 +16,7 @@ const Grid = () => {
           <div className="flex gap-x-10 gap-y-5 flex-col items-center md:items-start text-center md:text-start md:flex-row w-full font-cairo">
             <div className="rounded-full overflow-hidden size-32 sm:!size-60">
               <Image
-                src="/1725610094887.jpg"
+                src="/my_picture.jpg"
                 alt="Abdulwahab"
                 width={400}
                 height={400}
