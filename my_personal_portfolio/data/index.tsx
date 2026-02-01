@@ -2,12 +2,14 @@ import { z } from "zod";
 import { FaFacebook, FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiFiverr } from "react-icons/si";
 
+import { FaHome, FaUser, FaBriefcase, FaGraduationCap, FaEnvelope } from "react-icons/fa";
+
 export const navItems = [
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Experience", link: "#experience" },
-  { name: "Education", link: "#education" },
-  { name: "Contact", link: "#contact" },
+  { name: "About", link: "#about", icon: <FaUser /> },
+  { name: "Projects", link: "#projects", icon: <FaBriefcase /> },
+  { name: "Experience", link: "#experience", icon: <FaBriefcase /> },
+  { name: "Education", link: "#education", icon: <FaGraduationCap /> },
+  { name: "Contact", link: "#contact", icon: <FaEnvelope /> },
 ];
 
 export const skillsData = [
