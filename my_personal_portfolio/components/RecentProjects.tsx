@@ -16,7 +16,7 @@ function Projects() {
         {projects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 sm:gap-10 sm:mt-10">
             {projects.map((project) => (
-              <MagicCard key={project.id} className="w-full h-full">
+              <MagicCard key={project.id} className="w-full h-full" titleClassName="min-h-fit h-auto">
                 <div className="flex flex-col w-full h-full hover:shadow-xl transition-shadow duration-500">
 
                   {/* Fixed image height */}

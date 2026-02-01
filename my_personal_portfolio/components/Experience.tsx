@@ -2,6 +2,8 @@ import { workExperience, openSourceAchievements } from "@/data";
 import { MagicCard } from "./ui/Card";
 import { GradualSpacing } from "./ui/GradualSpacing";
 import React from "react";
+import Image from "next/image";
+
 
 const Experience = () => {
     return (
@@ -13,13 +15,26 @@ const Experience = () => {
                     <MagicCard
                         key={card.id}
                         className={`flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800 ${card.className}`}
-
+                        titleClassName="min-h-fit h-auto"
                     >
                         <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
                             <div className="lg:ms-5">
-                                <h1 className="text-start text-xl md:text-2xl font-bold">
-                                    {card.title}
-                                </h1>
+                                <div className="flex items-center gap-3">
+                                    {/* @ts-ignore */}
+                                    {card.thumbnail && (
+                                        <Image
+                                            // @ts-ignore
+                                            src={card.thumbnail}
+                                            alt={card.company}
+                                            width={32}
+                                            height={32}
+                                            className="rounded-full w-8 h-8 object-cover border border-gray-100 dark:border-slate-800"
+                                        />
+                                    )}
+                                    <h1 className="text-start text-xl md:text-2xl font-bold">
+                                        {card.title}
+                                    </h1>
+                                </div>
                                 <p className="text-start text-gray-500 dark:text-gray-400 mt-1 font-semibold">
                                     {card.company} - {card.location}
                                 </p>
@@ -48,11 +63,21 @@ const Experience = () => {
                         <MagicCard
                             key={item.id}
                             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                            titleClassName="min-h-fit h-auto"
                         >
-                            <div className="flex flex-col p-5 gap-2">
-                                <h1 className="text-xl md:text-2xl font-bold">
-                                    {item.project}
-                                </h1>
+                            <div className="flex flex-col p-5 gap-2 w-full">
+                                <div className="flex items-center gap-3">
+                                    <Image
+                                        src={item.icon}
+                                        alt={item.project}
+                                        width={48}
+                                        height={48}
+                                        className="rounded-lg w-10 h-10 md:w-12 md:h-12 object-contain bg-white dark:bg-black-200 p-1 border border-gray-100 dark:border-white/[0.1]"
+                                    />
+                                    <h1 className="text-xl md:text-2xl font-bold leading-tight">
+                                        {item.project}
+                                    </h1>
+                                </div>
                                 <p className="text-sm font-semibold text-blue">
                                     {item.role}
                                 </p>

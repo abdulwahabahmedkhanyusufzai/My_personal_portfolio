@@ -81,8 +81,9 @@ export const projects = [
 export const workExperience = [
   {
     id: 1,
-    title: "Junior Software Engineer",
+    title: "MERN Stack Developer",
     company: "QF Network",
+    thumbnail: "/qf_network.png",
     location: "Karachi, Pakistan",
     date: "Mar 2025 – Present",
     desc: [
@@ -100,6 +101,7 @@ export const openSourceAchievements = [
     id: 1,
     project: "Google / JAX",
     role: "High-Performance Numerical Computing",
+    icon: "/jax.png",
     date: "Jan 2026 – Present",
     desc: [
       "Refactored rankdata functions to implement high-performance lazy execution using lax.cond, eliminating redundant sorting overhead (PR #34628).",
@@ -110,6 +112,7 @@ export const openSourceAchievements = [
     id: 2,
     project: "Google / Colab-VSCode Extension",
     role: "TypeScript, Jupyter Protocol",
+    icon: "/ts.svg",
     date: "Jan 2026 – Present",
     desc: [
       "Overhauled Authentication UX by intercepting kernel-level input request messages and replacing static URLs with custom VS Code UI (PR #375).",
@@ -120,6 +123,7 @@ export const openSourceAchievements = [
     id: 3,
     project: "Google / Colabtools",
     role: "Core Library",
+    icon: "/gcloud.svg",
     date: "Jan 2026 – Present",
     desc: [
       "Improved developer experience by implementing actionable error messages for Drive mount credential failures (PR #5805).",
@@ -130,6 +134,7 @@ export const openSourceAchievements = [
     id: 4,
     project: "Google / Tunix",
     role: "Reinforcement Learning Library",
+    icon: "/rf.png",
     date: "Jan 2026 – Present",
     desc: [
       "Diagnosed and resolved a critical AttributeError in the rl cluster module affecting Python 3.11+ environments (PR #1000).",
@@ -166,13 +171,22 @@ export const education = [
     degree: "Bachelor of Science in Computer Science (BSCS)",
     date: "Expected 2029",
     location: "Karachi, Pakistan",
-    desc: "Distance Learning / Flexible Schedule (Fully compatible with professional business hours)",
+    desc: "Currently pursuing Bachelor's degree with a focus on Computer Science fundamentals.",
+    grade: "1st Semester",
+    coursework: [
+      "Introduction to Computing",
+      "English Comprehension",
+      "General Mathematics",
+      "Calculus & Analytical Geometry",
+      "Discrete Mathematics",
+      "Physics",
+      "Introduction to E-Learning",
+      "Pakistan Studies"
+    ],
   },
 ];
 
-const yearsOfExperience = 1; // Updated to 1 based on 2025 start? Wait, user says Mar 2025 - Present (now Jan 2026). So ~1 year.
-const projectsCompleted = 20; // Estimate
-const clients = 5; // Estimate
+const yearsOfExperience = 1;
 
 export const aboutData = [
   {
@@ -180,12 +194,12 @@ export const aboutData = [
     text: "Years of Experience",
   },
   {
-    number: projectsCompleted,
-    text: "Projects Completed",
+    number: 4,
+    text: "Projects at QF Network",
   },
   {
-    number: clients,
-    text: "Clients",
+    number: 6,
+    text: "Personal Projects",
   },
 ];
 
