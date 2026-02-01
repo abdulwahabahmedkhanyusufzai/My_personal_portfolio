@@ -32,11 +32,9 @@ const Education = () => {
 
                                     <div className="flex items-center gap-4 text-sm text-gray-500">
                                         <span>{edu.location}</span>
-                                        {/* @ts-ignore */}
                                         {edu.grade && (
                                             <>
                                                 <span className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
-                                                {/* @ts-ignore */}
                                                 <span className="font-medium text-black dark:text-gray-300">{edu.grade}</span>
                                             </>
                                         )}
@@ -47,12 +45,10 @@ const Education = () => {
                                     </p>
 
                                     {/* Coursework Badges */}
-                                    {/* @ts-ignore */}
                                     {edu.coursework && (
                                         <div className="mt-2">
                                             <p className="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">Relevant Coursework</p>
                                             <div className="flex flex-wrap gap-2">
-                                                {/* @ts-ignore */}
                                                 {edu.coursework.map((course, idx) => (
                                                     <span
                                                         key={idx}

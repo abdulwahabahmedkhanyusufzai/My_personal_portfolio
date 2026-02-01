@@ -20,10 +20,8 @@ const Experience = () => {
                         <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
                             <div className="lg:ms-5">
                                 <div className="flex items-center gap-3">
-                                    {/* @ts-ignore */}
                                     {card.thumbnail && (
                                         <Image
-                                            // @ts-ignore
                                             src={card.thumbnail}
                                             alt={card.company}
                                             width={32}
