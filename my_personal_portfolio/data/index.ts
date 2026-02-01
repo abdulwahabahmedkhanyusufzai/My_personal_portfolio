@@ -14,25 +14,25 @@ export const skillsData = [
   {
     category: "Languages",
     skills: [
-      { name: "Python", icon: "/python.svg", level: "Advanced" }, // Placeholder icon if missing
+      { name: "Python", icon: "/python.jfif", level: "Advanced" }, // Placeholder icon if missing
       { name: "C++ (DSA)", icon: "/c.svg", level: "Advanced" },
       { name: "JavaScript", icon: "/js.svg", level: "Advanced" },
       { name: "TypeScript", icon: "/ts.svg", level: "Advanced" },
-      { name: "SQL", icon: "/sql.svg", level: "Intermediate" }, // Placeholder
-      { name: "GraphQL", icon: "/graphql.svg", level: "Intermediate" }, // Placeholder
+      { name: "SQL", icon: "/sql.png", level: "Intermediate" }, // Placeholder
+      { name: "GraphQL", icon: "/graphQLsvg.png", level: "Intermediate" }, // Placeholder
     ],
   },
   {
     category: "AI/ML",
     skills: [
-      { name: "Machine Learning", icon: "/ml.svg", level: "Advanced" }, // Placeholder
-      { name: "Computer Vision", icon: "/cv.svg", level: "Advanced" }, // Placeholder
-      { name: "Reinforcement Learning", icon: "/rl.svg", level: "Advanced" }, // Placeholder
-      { name: "JAX", icon: "/jax.svg", level: "Advanced" }, // Placeholder
-      { name: "Scikit-learn", icon: "/sklearn.svg", level: "Advanced" }, // Placeholder
-      { name: "NumPy", icon: "/numpy.svg", level: "Advanced" }, // Placeholder
-      { name: "Pandas", icon: "/pandas.svg", level: "Advanced" }, // Placeholder
-    ],
+      { name: "Machine Learning", icon: "/machine-learning-model.svg", level: "Advanced" }, // Placeholder
+      { name: "Computer Vision", icon: "/cv.png", level: "Advanced" }, // Placeholder
+      { name: "Reinforcement Learning", icon: "/rf.png", level: "Advanced" }, // Placeholder
+      { name: "JAX", icon: "/jax.png", level: "Advanced" }, // Placeholder
+      { name: "Scikit-learn", icon: "/sk-learn.png", level: "Advanced" }, // Placeholder
+      { name: "NumPy", icon: "/np.png", level: "Advanced" }, // Placeholder
+      { name: "Pandas", icon: "/pd.png", level: "Advanced" }, // Placeholder
+    ]
   },
   {
     category: "Web Development",
@@ -43,8 +43,8 @@ export const skillsData = [
       { name: "Express", icon: "/express.svg", level: "Advanced" },
       { name: "MongoDB", icon: "/mongodb.svg", level: "Advanced" },
       { name: "Prisma", icon: "/prisma.svg", level: "Intermediate" }, // Placeholder
-      { name: "Remix", icon: "/remix.svg", level: "Intermediate" }, // Placeholder
-      { name: "Shopify", icon: "/shopify.svg", level: "Intermediate" }, // Placeholder
+      { name: "Remix", icon: "/remix.webp", level: "Intermediate" }, // Placeholder
+      { name: "Shopify", icon: "/shopify.png", level: "Intermediate" }, // Placeholder
     ],
   },
   {
@@ -52,7 +52,7 @@ export const skillsData = [
     skills: [
       { name: "Google Cloud", icon: "/gcloud.svg", level: "Intermediate" },
       { name: "Docker", icon: "/dock.svg", level: "Intermediate" },
-      { name: "Linux (WSL)", icon: "/linux.svg", level: "Advanced" }, // Placeholder
+      { name: "Linux (WSL)", icon: "/linux.jfif", level: "Advanced" }, // Placeholder
       { name: "Git", icon: "/git.svg", level: "Advanced" },
       { name: "Postman", icon: "/postman.svg", level: "Advanced" },
     ],
