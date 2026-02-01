@@ -14,12 +14,12 @@ export const skillsData = [
   {
     category: "Languages",
     skills: [
-      { name: "Python", icon: "/python.jfif", level: "Advanced" }, // Placeholder icon if missing
+      { name: "Python", icon: "/python.svg", level: "Advanced" }, // Placeholder icon if missing
       { name: "C++ (DSA)", icon: "/c.svg", level: "Advanced" },
       { name: "JavaScript", icon: "/js.svg", level: "Advanced" },
       { name: "TypeScript", icon: "/ts.svg", level: "Advanced" },
       { name: "SQL", icon: "/sql.png", level: "Intermediate" }, // Placeholder
-      { name: "GraphQL", icon: "/graphQLsvg.png", level: "Intermediate" }, // Placeholder
+      { name: "GraphQL", icon: "/graphql.png", level: "Intermediate" }, // Placeholder
     ],
   },
   {
@@ -52,7 +52,7 @@ export const skillsData = [
     skills: [
       { name: "Google Cloud", icon: "/gcloud.svg", level: "Intermediate" },
       { name: "Docker", icon: "/dock.svg", level: "Intermediate" },
-      { name: "Linux (WSL)", icon: "/linux.jfif", level: "Advanced" }, // Placeholder
+      { name: "Linux (WSL)", icon: "/linux.svg", level: "Advanced" }, // Placeholder
       { name: "Git", icon: "/git.svg", level: "Advanced" },
       { name: "Postman", icon: "/postman.svg", level: "Advanced" },
     ],
