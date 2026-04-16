@@ -26,6 +26,7 @@ concurrency:
 
 env:
   APP_DIR: my_personal_portfolio
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   # Build job
@@ -54,7 +55,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ${{ env.APP_DIR }}/package-lock.json
       - name: Setup Pages
