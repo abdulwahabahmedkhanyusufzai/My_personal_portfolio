@@ -1,4 +1,4 @@
-import { education, appliedML } from "@/data";
+import { education } from "@/data";
 import { MagicCard } from "./ui/Card";
 import { GradualSpacing } from "./ui/GradualSpacing";
 import React from "react";
@@ -66,39 +66,7 @@ const Education = () => {
                     </div>
                 </div>
 
-                {/* Applied Machine Learning Section */}
-                <div className="w-full max-w-6xl flex flex-col items-center">
-                    <GradualSpacing text="Applied Machine Learning" />
 
-                    <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {appliedML.map((item) => (
-                            <MagicCard
-                                key={item.id}
-                                className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800 p-6"
-                                titleClassName="min-h-fit h-auto"
-                            >
-                                <div className="flex flex-col h-full gap-4">
-                                    <div className="flex flex-col gap-1">
-                                        <h3 className="text-lg font-bold text-brand-primary dark:text-brand-secondary leading-snug">
-                                            {item.title}
-                                        </h3>
-                                        <div className="flex items-center justify-between mt-2">
-                                            <span className="text-xs font-bold text-brand-primary dark:text-blue-400 px-2 py-1 bg-brand-primary/10 dark:bg-blue-400/10 rounded border border-brand-primary/20 dark:border-blue-400/20">
-                                                {item.rank}
-                                            </span>
-                                            <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-600 dark:text-neutral-300 px-2 py-1 bg-neutral-100 dark:bg-white/10 rounded">
-                                                {item.category}
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                                        {item.desc}
-                                    </p>
-                                </div>
-                            </MagicCard>
-                        ))}
-                    </div>
-                </div>
 
             </div>
         </div>

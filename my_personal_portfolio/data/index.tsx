@@ -63,17 +63,17 @@ export const projects = [
     id: 1,
     title: "High-Concurrency AI Orchestrator",
     des: "Engineered a high-throughput distributed orchestration engine in Go, implementing worker pools and channel-based concurrency to safely manage parallel LLM API workloads.",
-    img: "/p1.png", 
+    img: "/p1.png",
     iconLists: ["/go.svg", "/dock.svg", "/gcloud.svg", "/next.svg"],
-    link: "https://github.com/abdulwahabahmedkhanyusufzai", 
+    link: "https://github.com/abdulwahabahmedkhanyusufzai",
   },
   {
     id: 2,
     title: "Distributed Media Streaming Platform",
     des: "Designed scalable media backend with Spring Boot and PostgreSQL, featuring stateless JWT authentication and optimized payload chunking for low-latency streaming.",
-    img: "/NetflixClone.jpeg", 
+    img: "/NetflixClone.jpeg",
     iconLists: ["/java.svg", "/sql.png", "/dock.svg", "/ts.svg"],
-    link: "https://github.com/abdulwahabahmedkhanyusufzai", 
+    link: "https://github.com/abdulwahabahmedkhanyusufzai",
   },
 ];
 

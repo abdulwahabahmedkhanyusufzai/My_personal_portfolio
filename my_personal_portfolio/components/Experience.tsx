@@ -54,33 +54,32 @@ const Experience = () => {
             </div>
 
             {/* Applied ML Section */}
-            <div className="mt-32">
+            {/* Applied Machine Learning Section */}
+            <div className="w-full max-w-6xl flex flex-col items-center">
                 <GradualSpacing text="Applied Machine Learning" />
-                <div className="w-full mt-12 grid lg:grid-cols-3 grid-cols-1 gap-10">
+
+                <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {appliedML.map((item) => (
                         <MagicCard
                             key={item.id}
-                            className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                            className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800 p-6"
                             titleClassName="min-h-fit h-auto"
                         >
-                            <div className="flex flex-col p-5 lg:p-8 gap-2 w-full">
-                                <div className="flex items-center gap-3 mb-2">
-                                    <div className="p-2 bg-purple/10 rounded-lg">
-                                        <FaMicrochip className="text-purple text-xl" />
-                                    </div>
-                                    <h1 className="text-xl font-bold leading-tight">
+                            <div className="flex flex-col h-full gap-4">
+                                <div className="flex flex-col gap-1">
+                                    <h3 className="text-lg font-bold text-brand-primary dark:text-brand-secondary leading-snug">
                                         {item.title}
-                                    </h1>
+                                    </h3>
+                                    <div className="flex items-center justify-between mt-2">
+                                        <span className="text-xs font-bold text-brand-primary dark:text-blue-400 px-2 py-1 bg-brand-primary/10 dark:bg-blue-400/10 rounded border border-brand-primary/20 dark:border-blue-400/20">
+                                            {item.rank}
+                                        </span>
+                                        <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-600 dark:text-neutral-300 px-2 py-1 bg-neutral-100 dark:bg-white/10 rounded">
+                                            {item.category}
+                                        </span>
+                                    </div>
                                 </div>
-                                <div className="flex justify-between items-center">
-                                    <span className="text-sm font-bold text-blue">
-                                        {item.rank}
-                                    </span>
-                                    <span className="text-xs px-2 py-1 bg-black-100 dark:bg-white/10 rounded-full">
-                                        {item.category}
-                                    </span>
-                                </div>
-                                <p className="text-sm text-gray-700 dark:text-gray-300 mt-4 leading-relaxed">
+                                <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                     {item.desc}
                                 </p>
                             </div>
