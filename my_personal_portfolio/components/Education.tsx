@@ -1,4 +1,4 @@
-import { education, dataScienceCompetitions } from "@/data";
+import { education, appliedML } from "@/data";
 import { MagicCard } from "./ui/Card";
 import { GradualSpacing } from "./ui/GradualSpacing";
 import React from "react";
@@ -6,53 +6,53 @@ import React from "react";
 const Education = () => {
     return (
         <div className="py-20" id="education">
-            <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+            <div className="flex flex-col items-center gap-24">
 
-                {/* Left Column: Education */}
-                <div className="w-full lg:w-1/2">
+                {/* Education Section */}
+                <div className="w-full max-w-4xl flex flex-col items-center">
                     <GradualSpacing text="Education" />
 
-                    <div className="w-full mt-10 grid grid-cols-1 gap-10">
+                    <div className="w-full mt-10 flex justify-center">
                         {education.map((edu) => (
                             <MagicCard
                                 key={edu.id}
-                                className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800 p-6"
+                                className="w-full text-black dark:text-white border-neutral-200 dark:border-slate-800 p-8 md:p-10"
                                 titleClassName="min-h-fit h-auto"
                             >
-                                <div className="flex flex-col gap-3">
-                                    <div className="flex justify-between items-start sm:flex-row flex-col gap-2">
-                                        <div>
-                                            <h1 className="text-xl md:text-2xl font-bold">{edu.institution}</h1>
-                                            <p className="text-lg font-semibold text-blue mt-1">{edu.degree}</p>
+                                <div className="flex flex-col items-center text-center gap-6">
+                                    <div className="flex flex-col items-center gap-2">
+                                        <h1 className="text-2xl md:text-4xl font-bold text-brand-primary dark:text-brand-secondary">
+                                            {edu.institution}
+                                        </h1>
+                                        <p className="text-xl md:text-2xl font-semibold text-neutral-700 dark:text-neutral-300">
+                                            {edu.degree}
+                                        </p>
+                                        <div className="flex items-center gap-3 mt-2">
+                                            <span className="text-sm font-medium px-4 py-1.5 bg-brand-primary/10 text-brand-primary dark:text-brand-secondary rounded-full border border-brand-primary/20 whitespace-nowrap">
+                                                {edu.date}
+                                            </span>
+                                            <span className="text-sm text-neutral-500 font-medium">{edu.location}</span>
                                         </div>
-                                        <span className="text-sm font-medium px-3 py-1 bg-gray-100 dark:bg-slate-900 rounded-full border border-gray-200 dark:border-slate-800 whitespace-nowrap">
-                                            {edu.date}
-                                        </span>
                                     </div>
 
-                                    <div className="flex items-center gap-4 text-sm text-gray-500">
-                                        <span>{edu.location}</span>
-                                        {edu.grade && (
-                                            <>
-                                                <span className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
-                                                <span className="font-medium text-black dark:text-gray-300">{edu.grade}</span>
-                                            </>
-                                        )}
+                                    <div className="flex items-center gap-2 text-base font-bold text-blue">
+                                        <span>Current Progress:</span>
+                                        <span className="px-3 py-1 bg-blue/10 rounded-lg">{edu.grade}</span>
                                     </div>
 
-                                    <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-2xl">
                                         {edu.desc}
                                     </p>
 
                                     {/* Coursework Badges */}
                                     {edu.coursework && (
-                                        <div className="mt-2">
-                                            <p className="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">Relevant Coursework</p>
-                                            <div className="flex flex-wrap gap-2">
+                                        <div className="w-full mt-4">
+                                            <p className="text-xs font-bold text-neutral-500 mb-4 uppercase tracking-[0.2em]">Core Technical Coursework</p>
+                                            <div className="flex flex-wrap justify-center gap-3">
                                                 {edu.coursework.map((course, idx) => (
                                                     <span
                                                         key={idx}
-                                                        className="text-xs px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-300 border border-blue-100 dark:border-blue-900/50"
+                                                        className="text-xs md:text-sm px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-white/10 hover:border-brand-primary/50 transition-colors"
                                                     >
                                                         {course}
                                                     </span>
@@ -66,31 +66,36 @@ const Education = () => {
                     </div>
                 </div>
 
-                {/* Right Column: Data Science Competitions */}
-                <div className="w-full lg:w-1/2">
-                    <GradualSpacing text="Data Science Competitions" />
+                {/* Applied Machine Learning Section */}
+                <div className="w-full max-w-6xl flex flex-col items-center">
+                    <GradualSpacing text="Applied Machine Learning" />
 
-                    <div className="relative border-l border-gray-200 dark:border-slate-800 ml-3 md:ml-6 mt-10 space-y-8">
-                        {dataScienceCompetitions.map((comp) => (
-                            <div key={comp.id} className="relative pl-8 md:pl-12">
-                                {/* Timeline Dot */}
-                                <span className="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-blue-500 ring-4 ring-white dark:ring-[#000319]" />
-
-                                {/* Card Content */}
-                                <div className="flex flex-col gap-2 relative">
-                                    <div className="flex sm:flex-row flex-col sm:items-center sm:justify-between gap-x-4">
-                                        <h3 className="text-lg font-bold text-black dark:text-white leading-snug">
-                                            {comp.title}
+                    <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {appliedML.map((item) => (
+                            <MagicCard
+                                key={item.id}
+                                className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800 p-6"
+                                titleClassName="min-h-fit h-auto"
+                            >
+                                <div className="flex flex-col h-full gap-4">
+                                    <div className="flex flex-col gap-1">
+                                        <h3 className="text-lg font-bold text-brand-primary dark:text-brand-secondary leading-snug">
+                                            {item.title}
                                         </h3>
-                                        <span className="text-xs font-medium text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30 px-2 py-0.5 rounded w-fit mt-1 sm:mt-0">
-                                            {comp.rank}
-                                        </span>
+                                        <div className="flex items-center justify-between mt-2">
+                                            <span className="text-xs font-bold text-brand-primary dark:text-blue-400 px-2 py-1 bg-brand-primary/10 dark:bg-blue-400/10 rounded border border-brand-primary/20 dark:border-blue-400/20">
+                                                {item.rank}
+                                            </span>
+                                            <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-600 dark:text-neutral-300 px-2 py-1 bg-neutral-100 dark:bg-white/10 rounded">
+                                                {item.category}
+                                            </span>
+                                        </div>
                                     </div>
-                                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                                        {comp.desc}
+                                    <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                                        {item.desc}
                                     </p>
                                 </div>
-                            </div>
+                            </MagicCard>
                         ))}
                     </div>
                 </div>

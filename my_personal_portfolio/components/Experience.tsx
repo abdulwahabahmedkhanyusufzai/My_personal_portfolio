@@ -1,8 +1,9 @@
-import { workExperience, openSourceAchievements } from "@/data";
+import { workExperience, appliedML, competitiveProgramming } from "@/data";
 import { MagicCard } from "./ui/Card";
 import { GradualSpacing } from "./ui/GradualSpacing";
 import React from "react";
 import Image from "next/image";
+import { FaTrophy, FaMicrochip } from "react-icons/fa6";
 
 
 const Experience = () => {
@@ -52,40 +53,63 @@ const Experience = () => {
                 ))}
             </div>
 
-            <div className="mt-20">
-                <GradualSpacing text="Engineering Achievements" />
-                <p className="text-center text-gray-500 dark:text-gray-400 mb-10">(Open Source)</p>
-
-                <div className="w-full grid lg:grid-cols-2 grid-cols-1 gap-10">
-                    {openSourceAchievements.map((item) => (
+            {/* Applied ML Section */}
+            <div className="mt-32">
+                <GradualSpacing text="Applied Machine Learning" />
+                <div className="w-full mt-12 grid lg:grid-cols-3 grid-cols-1 gap-10">
+                    {appliedML.map((item) => (
                         <MagicCard
                             key={item.id}
                             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
                             titleClassName="min-h-fit h-auto"
                         >
-                            <div className="flex flex-col p-5 gap-2 w-full">
-                                <div className="flex items-center gap-3">
-                                    <Image
-                                        src={item.icon}
-                                        alt={item.project}
-                                        width={48}
-                                        height={48}
-                                        className="rounded-lg w-10 h-10 md:w-12 md:h-12 object-contain bg-white dark:bg-black-200 p-1 border border-gray-100 dark:border-white/[0.1]"
-                                    />
-                                    <h1 className="text-xl md:text-2xl font-bold leading-tight">
-                                        {item.project}
+                            <div className="flex flex-col p-5 lg:p-8 gap-2 w-full">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <div className="p-2 bg-purple/10 rounded-lg">
+                                        <FaMicrochip className="text-purple text-xl" />
+                                    </div>
+                                    <h1 className="text-xl font-bold leading-tight">
+                                        {item.title}
                                     </h1>
                                 </div>
-                                <p className="text-sm font-semibold text-blue">
-                                    {item.role}
-                                </p>
-                                <div className="flex flex-col gap-2 mt-2">
-                                    {item.desc.map((d, i) => (
-                                        <p key={i} className="text-sm text-gray-700 dark:text-gray-300">
-                                            • {d}
-                                        </p>
-                                    ))}
+                                <div className="flex justify-between items-center">
+                                    <span className="text-sm font-bold text-blue">
+                                        {item.rank}
+                                    </span>
+                                    <span className="text-xs px-2 py-1 bg-black-100 dark:bg-white/10 rounded-full">
+                                        {item.category}
+                                    </span>
                                 </div>
+                                <p className="text-sm text-gray-700 dark:text-gray-300 mt-4 leading-relaxed">
+                                    {item.desc}
+                                </p>
+                            </div>
+                        </MagicCard>
+                    ))}
+                </div>
+            </div>
+
+            {/* Competitive Programming Section */}
+            <div className="mt-32">
+                <GradualSpacing text="Competitive Programming" />
+                <div className="w-full mt-12 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
+                    {competitiveProgramming.map((item) => (
+                        <MagicCard
+                            key={item.id}
+                            className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                            titleClassName="min-h-fit h-auto"
+                        >
+                            <div className="flex flex-col p-6 gap-2 w-full items-center text-center">
+                                <FaTrophy className="text-amber-400 text-3xl mb-2" />
+                                <h1 className="text-xl font-bold">
+                                    {item.platform}
+                                </h1>
+                                <p className="text-sm font-bold text-blue mb-2">
+                                    {item.rank}
+                                </p>
+                                <p className="text-xs text-gray-600 dark:text-gray-400">
+                                    {item.desc}
+                                </p>
                             </div>
                         </MagicCard>
                     ))}

@@ -8,23 +8,7 @@ function Footer() {
 
   return (
     <footer className="w-full pt-20 pb-10 border-t border-black/10 dark:border-white/10" id="contact">
-      <div className="flex flex-col items-center mb-16">
-        <h1 className="heading lg:max-w-[45vw] text-center">
-          Ready to take <span className="text-blue">your</span> digital
-          presence to the next level?
-        </h1>
-        <p className="text-gray-700 dark:text-white-200 my-5 text-center max-w-md">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
-        </p>
-        <a href="mailto:absurw@gmail.com">
-          <MagicButton
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
-      </div>
+
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 border-t border-black/5 dark:border-white/5 pt-16">
         {/* Logo & Bio */}
@@ -44,8 +28,8 @@ function Footer() {
           <h4 className="text-lg font-semibold dark:text-white text-black">Quick Links</h4>
           <div className="grid grid-cols-2 gap-2">
             {navItems.map((item, idx) => (
-              <Link 
-                key={idx} 
+              <Link
+                key={idx}
                 href={item.link}
                 className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-blue transition-colors"
               >

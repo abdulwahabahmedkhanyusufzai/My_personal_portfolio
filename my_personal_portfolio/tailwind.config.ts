@@ -41,7 +41,15 @@ const config = {
         },
         blue: {
           "100": "#E4ECFF",
-          DEFAULT: "#3B82F6", // Replacing purple with a standard Blue
+          DEFAULT: "#3B82F6",
+        },
+        brand: {
+          primary: "#0062ff",
+          secondary: "#7000ff",
+          text: {
+            light: "#05070a",
+            dark: "#f0f2f5"
+          }
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

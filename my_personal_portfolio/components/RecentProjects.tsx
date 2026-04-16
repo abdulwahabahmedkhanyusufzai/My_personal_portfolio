@@ -35,7 +35,7 @@ function Projects() {
 
                   {/* Project Details */}
                   <div className="p-5">
-                    <h2 className="text-2xl font-bold truncate">
+                    <h2 className="text-2xl font-bold truncate text-brand-primary dark:text-brand-secondary">
                       {project.title}
                     </h2>
                     <p className="mt-3 text-sm text-gray-800 dark:text-white-100 line-clamp-4">

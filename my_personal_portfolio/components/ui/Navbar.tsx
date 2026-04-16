@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@/app/lib/utils/cn";
 import { ModeToggle } from "./ModeToggle";
-import { navItems } from "@/data";
+import { navItems, socialMedia } from "@/data";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 export const Navbar = () => {
@@ -28,14 +28,17 @@ export const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-10 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold tracking-tighter dark:text-white text-black">
-            AWK<span className="text-blue">.</span>
-          </span>
-        </Link>
+        {/* Left: Logo */}
+        <div className="flex-1 md:flex-initial">
+          <Link href="/" className="flex items-center gap-2">
+            <span className="text-xl font-bold tracking-tighter text-brand-primary dark:text-brand-secondary">
+              AWK<span className="text-brand-primary">.</span>
+            </span>
+          </Link>
+        </div>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Center: Nav Items (Desktop) */}
+        <div className="hidden md:flex items-center justify-center gap-8 flex-[2]">
           {navItems.map((item, idx) => (
             <Link
               key={idx}
@@ -51,6 +54,22 @@ export const Navbar = () => {
           >
             Resume
           </Link>
+        </div>
+
+        {/* Right: Socials & Theme Toggle */}
+        <div className="hidden md:flex items-center justify-end gap-6 flex-1">
+          <div className="flex items-center gap-3">
+            {socialMedia.map((social) => (
+              <Link
+                key={social.id}
+                href={social.link}
+                target="_blank"
+                className="text-neutral-600 dark:text-neutral-300 hover:text-blue dark:hover:text-blue transition-colors"
+              >
+                <social.icon size={18} />
+              </Link>
+            ))}
+          </div>
           <ModeToggle />
         </div>
 
@@ -73,7 +92,7 @@ export const Navbar = () => {
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         )}
       >
-        <div className="flex flex-col gap-4 p-5">
+        <div className="flex flex-col gap-4 p-5 text-center">
           {navItems.map((item, idx) => (
             <Link
               key={idx}
@@ -91,6 +110,21 @@ export const Navbar = () => {
           >
             View Resume
           </Link>
+          
+          <div className="h-[1px] bg-black/10 dark:border-white/10 my-2" />
+          
+          <div className="flex items-center gap-6 justify-center py-2">
+            {socialMedia.map((social) => (
+              <Link
+                key={social.id}
+                href={social.link}
+                target="_blank"
+                className="text-neutral-600 dark:text-neutral-300 hover:text-blue transition-colors"
+              >
+                <social.icon size={24} />
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </nav>

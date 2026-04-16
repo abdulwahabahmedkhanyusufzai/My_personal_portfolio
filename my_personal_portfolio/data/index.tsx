@@ -1,8 +1,8 @@
 import { z } from "zod";
 import { FaFacebook, FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiFiverr } from "react-icons/si";
+import { SiFiverr, SiLeetcode, SiCodeforces, SiKaggle, SiCodechef } from "react-icons/si";
 
-import { FaHome, FaUser, FaBriefcase, FaGraduationCap, FaEnvelope } from "react-icons/fa";
+import { FaHome, FaUser, FaBriefcase, FaGraduationCap, FaEnvelope, FaCode, FaMicrochip, FaServer, FaTerminal } from "react-icons/fa";
 
 export const navItems = [
   { name: "About", link: "#about", icon: <FaUser /> },
@@ -16,47 +16,44 @@ export const skillsData = [
   {
     category: "Languages",
     skills: [
-      { name: "Python", icon: "/python.svg", level: "Advanced" }, // Placeholder icon if missing
-      { name: "C++ (DSA)", icon: "/c.svg", level: "Advanced" },
-      { name: "JavaScript", icon: "/js.svg", level: "Advanced" },
+      { name: "C++", icon: "/c.svg", level: "Expert" },
+      { name: "Python", icon: "/python.svg", level: "Expert" },
+      { name: "Go", icon: "/go.svg", level: "Advanced" },
       { name: "TypeScript", icon: "/ts.svg", level: "Advanced" },
-      { name: "SQL", icon: "/sql.png", level: "Intermediate" }, // Placeholder
-      { name: "GraphQL", icon: "/graphql.png", level: "Intermediate" }, // Placeholder
+      { name: "Java", icon: "/java.svg", level: "Advanced" },
+      { name: "SQL", icon: "/sql.png", level: "Advanced" },
     ],
   },
   {
-    category: "AI/ML",
+    category: "ML Infrastructure",
     skills: [
-      { name: "Machine Learning", icon: "/machine-learning-model.svg", level: "Advanced" }, // Placeholder
-      { name: "Computer Vision", icon: "/cv.png", level: "Advanced" }, // Placeholder
-      { name: "Reinforcement Learning", icon: "/rf.png", level: "Advanced" }, // Placeholder
-      { name: "JAX", icon: "/jax.png", level: "Advanced" }, // Placeholder
-      { name: "Scikit-learn", icon: "/sk-learn.png", level: "Advanced" }, // Placeholder
-      { name: "NumPy", icon: "/np.png", level: "Advanced" }, // Placeholder
-      { name: "Pandas", icon: "/pd.png", level: "Advanced" }, // Placeholder
+      { name: "JAX", icon: "/jax.png", level: "Expert" },
+      { name: "PyTorch", icon: "/pytorch.svg", level: "Advanced" },
+      { name: "XLA", icon: "/xla.png", level: "Advanced" },
+      { name: "Scikit-learn", icon: "/sk-learn.png", level: "Expert" },
+      { name: "NumPy", icon: "/np.png", level: "Expert" },
+      { name: "Pandas", icon: "/pd.png", level: "Expert" },
     ]
   },
   {
-    category: "Web Development",
+    category: "Backend & Systems",
     skills: [
-      { name: "React.js", icon: "/re.svg", level: "Advanced" },
-      { name: "Next.js", icon: "/next.svg", level: "Advanced" },
-      { name: "Node.js", icon: "/node-js.svg", level: "Advanced" },
-      { name: "Express", icon: "/express.svg", level: "Advanced" },
-      { name: "MongoDB", icon: "/mongodb.svg", level: "Advanced" },
-      { name: "Prisma", icon: "/prisma.svg", level: "Intermediate" }, // Placeholder
-      { name: "Remix", icon: "/remix.webp", level: "Intermediate" }, // Placeholder
-      { name: "Shopify", icon: "/shopify.png", level: "Intermediate" }, // Placeholder
+      { name: "Node.js", icon: "/node-js.svg", level: "Expert" },
+      { name: "Spring Boot", icon: "/spring.svg", level: "Advanced" },
+      { name: "BullMQ", icon: "/bullmq.png", level: "Advanced" },
+      { name: "Redis", icon: "/redis.svg", level: "Advanced" },
+      { name: "Next.js", icon: "/next.svg", level: "Expert" },
+      { name: "Prisma", icon: "/prisma.svg", level: "Expert" },
     ],
   },
   {
-    category: "Cloud & Tools",
+    category: "DevOps & Data",
     skills: [
-      { name: "Google Cloud", icon: "/gcloud.svg", level: "Intermediate" },
-      { name: "Docker", icon: "/dock.svg", level: "Intermediate" },
-      { name: "Linux (WSL)", icon: "/linux.svg", level: "Advanced" }, // Placeholder
-      { name: "Git", icon: "/git.svg", level: "Advanced" },
-      { name: "Postman", icon: "/postman.svg", level: "Advanced" },
+      { name: "PostgreSQL", icon: "/postgres.svg", level: "Expert" },
+      { name: "Docker", icon: "/dock.svg", level: "Advanced" },
+      { name: "Google Cloud", icon: "/gcloud.svg", level: "Advanced" },
+      { name: "CI/CD", icon: "/git.svg", level: "Advanced" },
+      { name: "Linux", icon: "/linux.svg", level: "Expert" },
     ],
   },
 ];
@@ -64,105 +61,88 @@ export const skillsData = [
 export const projects = [
   {
     id: 1,
-    title: "Scalable Video Content Platform",
-    des: "Engineered a video-sharing platform with JWT/Google OAuth, processing 5,000+ minutes of content. Optimized playback performance by 40% using lazy loading and ensured 99.9% uptime via Vercel.",
-    img: "/p1.png", // Reusing existing image as placeholder
-    iconLists: ["/re.svg", "/node-js.svg", "/gcloud.svg", "/vercel.svg"],
-    link: "https://github.com/abdulwahabahmedkhanyusufzai", // Fallback link
+    title: "High-Concurrency AI Orchestrator",
+    des: "Engineered a high-throughput distributed orchestration engine in Go, implementing worker pools and channel-based concurrency to safely manage parallel LLM API workloads.",
+    img: "/p1.png", 
+    iconLists: ["/go.svg", "/dock.svg", "/gcloud.svg", "/next.svg"],
+    link: "https://github.com/abdulwahabahmedkhanyusufzai", 
   },
   {
     id: 2,
-    title: "High-Performance Streaming Interface",
-    des: "Designed a Netflix-inspired UI with real-time content fetching and advanced filtering mechanisms. Built with MERN Stack and REST APIs.",
-    img: "/NetflixClone.jpeg", // Reusing existing image as placeholder
-    iconLists: ["/re.svg", "/tail.svg", "/node-js.svg", "/mongodb.svg"],
-    link: "https://github.com/abdulwahabahmedkhanyusufzai", // Fallback link
+    title: "Distributed Media Streaming Platform",
+    des: "Designed scalable media backend with Spring Boot and PostgreSQL, featuring stateless JWT authentication and optimized payload chunking for low-latency streaming.",
+    img: "/NetflixClone.jpeg", 
+    iconLists: ["/java.svg", "/sql.png", "/dock.svg", "/ts.svg"],
+    link: "https://github.com/abdulwahabahmedkhanyusufzai", 
   },
 ];
 
 export const workExperience = [
   {
     id: 1,
-    title: "MERN Stack Developer",
+    title: "Full Stack Developer",
     company: "QF Network",
     thumbnail: "/qf_network.png",
     location: "Karachi, Pakistan",
     date: "Mar 2025 – Present",
     desc: [
-      "Engineered custom Shopify applications using Remix.js and Prisma ORM, automating billing workflows and webhook handling.",
-      "Refactored legacy React codebases, implementing memoization and lazy loading to reduce FCP by 30%.",
-      "Deployed scalable REST APIs using Node.js and Express, integrating third-party services via robust authentication flows.",
-      "Maintained 99.9% uptime for client applications, debugging critical production issues within strict SLAs.",
+      "Optimized p99 API latency by 40% by refactoring Prisma schema and implementing composite B-Tree indexing in PostgreSQL.",
+      "Developed a semantic search engine using pgvector (HNSW indexing) for high-dimensional retrieval across 10,000+ SKU catalogs.",
+      "Architected an LLM pipeline in Next.js, reducing merchant onboarding time by 95% (hours to 5 mins) via automated context and rate-limit management.",
+      "Designed a distributed worker system using BullMQ and Redis, eliminating thread-blocking operations for asynchronous reward and webhook delivery.",
     ],
     className: "md:col-span-2",
   },
 ];
 
-export const openSourceAchievements = [
+export const appliedML = [
   {
     id: 1,
-    project: "Google / JAX",
-    role: "High-Performance Numerical Computing",
-    icon: "/jax.png",
-    date: "Jan 2026 – Present",
-    desc: [
-      "Refactored rankdata functions to implement high-performance lazy execution using lax.cond, eliminating redundant sorting overhead (PR #34628).",
-      "Core Team Review: Optimization approved by Google Research engineers for the v0.10.0 release.",
-    ],
+    title: "Stanford RNA 3D Folding",
+    rank: "Rank: 55/2,226 (Top 2.5%)",
+    category: "Scientific ML",
+    desc: "Engineered Transformer/CNN models with custom spatial embeddings; optimized GPU data pipelines for memory-constrained biological datasets.",
   },
   {
     id: 2,
-    project: "Google / Colab-VSCode Extension",
-    role: "TypeScript, Jupyter Protocol",
-    icon: "/ts.svg",
-    date: "Jan 2026 – Present",
-    desc: [
-      "Overhauled Authentication UX by intercepting kernel-level input request messages and replacing static URLs with custom VS Code UI (PR #375).",
-      "Resolved login blockers for Brave/Safari users by implementing a custom input reply handler that identifies client processes via Session IDs.",
-    ],
+    title: "Thermophysical Property Prediction",
+    rank: "Rank: 62/1,176 (Top 5%)",
+    category: "Chemical Informatics",
+    desc: "Developed regression models using SMILES-derived graph descriptors to predict molecular melting points and improve convergence stability.",
   },
   {
     id: 3,
-    project: "Google / Colabtools",
-    role: "Core Library",
-    icon: "/gcloud.svg",
-    date: "Jan 2026 – Present",
-    desc: [
-      "Improved developer experience by implementing actionable error messages for Drive mount credential failures (PR #5805).",
-      "Refined exception handling logic within core Colab utilities used by millions of monthly active users.",
-    ],
-  },
-  {
-    id: 4,
-    project: "Google / Tunix",
-    role: "Reinforcement Learning Library",
-    icon: "/rf.png",
-    date: "Jan 2026 – Present",
-    desc: [
-      "Diagnosed and resolved a critical AttributeError in the rl cluster module affecting Python 3.11+ environments (PR #1000).",
-      "Consolidated multiple stale pull requests into a single optimized patch.",
-    ],
+    title: "NVIDIA Nemotron Reasoning Challenge",
+    rank: "Rank: 69/432 (Top 16%)",
+    category: "LLM Fine-Tuning",
+    desc: "Performed supervised fine-tuning (SFT) on foundational LLMs using reasoning datasets, improving multi-step logical consistency.",
   },
 ];
 
-export const dataScienceCompetitions = [
+export const competitiveProgramming = [
   {
     id: 1,
-    title: "CSIRO – Image2Biomass Prediction",
-    rank: "Top 17% (671/3906) Global",
-    desc: "Developed a Deep Learning pipeline to estimate biomass from multi-spectral imagery. Applied using Regression-based CNNs.",
+    platform: "AtCoder",
+    rank: "Cyan (1200), Rank 67th Global",
+    desc: "Reached Cyan in a single debut match (Top 1% globally) in ABC 453.",
   },
   {
     id: 2,
-    title: "PhysioNet ECG Digitization",
-    rank: "Top 21% (299/1428) Global",
-    desc: "Developed a computer vision pipeline to extract ECG time-series data from scans. Implemented signal extraction algorithms.",
+    platform: "Codeforces",
+    rank: "Specialist (Max 1477)",
+    desc: "Regular Div.2 participant specializing in graph algorithms and dynamic programming.",
   },
   {
     id: 3,
-    title: "Diabetes Prediction Challenge",
-    rank: "Top 40% (1677/4206) Global",
-    desc: "Built ensemble learning models for medical classification, competing against 4,000+ international teams.",
+    platform: "LeetCode",
+    rank: "1000+ Solved (Top 5%)",
+    desc: "Expertise in advanced data structures and optimization techniques.",
+  },
+  {
+    id: 4,
+    platform: "CodeChef",
+    rank: "3-Star (1680 Rating)",
+    desc: "Achieved +450 rating increase in a single contest, ranking 7th in Pakistan.",
   },
 ];
 
@@ -174,34 +154,34 @@ export const education = [
     date: "Expected 2029",
     location: "Karachi, Pakistan",
     desc: "Currently pursuing Bachelor's degree with a focus on Computer Science fundamentals.",
-    grade: "1st Semester",
+    grade: "2nd Semester",
     coursework: [
-      "Introduction to Computing",
-      "English Comprehension",
-      "General Mathematics",
-      "Calculus & Analytical Geometry",
-      "Discrete Mathematics",
-      "Physics",
-      "Introduction to E-Learning",
-      "Pakistan Studies"
+      "Data Structures & Algorithms",
+      "Discrete Math",
+      "Systems Architecture",
+      "Calculus",
+      "Introduction to Programming",
+      "Digital Logic Design",
+      "Object Oriented Programming",
+      "Statistics and Probability"
     ],
   },
 ];
 
-const yearsOfExperience = 1;
+const projectsCompleted = 10;
 
 export const aboutData = [
   {
-    number: yearsOfExperience,
-    text: "Years of Experience",
+    number: 1,
+    text: "Year of Experience",
   },
   {
-    number: 4,
-    text: "Projects at QF Network",
+    number: projectsCompleted,
+    text: "Systems & ML Projects",
   },
   {
-    number: 6,
-    text: "Personal Projects",
+    number: 1000,
+    text: "LeetCode Problems",
   },
 ];
 
@@ -232,13 +212,13 @@ export const socialMedia = [
   },
   {
     id: 2,
-    link: "www.linkedin.com/in/awahab1567",
+    link: "https://www.linkedin.com/in/awahab1567",
     icon: FaLinkedin,
   },
   {
     id: 3,
-    link: "https://www.facebook.com/abdulwahabkhan",
-    icon: FaFacebook,
+    link: "https://leetcode.com/u/abdulwahabyusufzai72/",
+    icon: SiLeetcode,
   },
   {
     id: 4,
@@ -247,7 +227,7 @@ export const socialMedia = [
   },
   {
     id: 5,
-    link: "https://fiverr.com/wahabyusufzai",
-    icon: SiFiverr,
+    link: "https://www.kaggle.com/abdulwahabyusufzai",
+    icon: SiKaggle,
   },
 ];
