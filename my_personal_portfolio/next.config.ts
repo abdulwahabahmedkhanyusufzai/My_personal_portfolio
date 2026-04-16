@@ -4,7 +4,8 @@ const isGithubActions = process.env.GITHUB_ACTIONS === "true";
 const repositoryParts = process.env.GITHUB_REPOSITORY?.split("/") ?? [];
 const owner = repositoryParts.length === 2 ? repositoryParts[0] : "";
 const repository = repositoryParts.length === 2 ? repositoryParts[1] : "";
-const isUserSite = !!owner && repository.toLowerCase() === `${owner.toLowerCase()}.github.io`;
+const ownerLower = owner.toLowerCase();
+const isUserSite = !!owner && repository.toLowerCase() === `${ownerLower}.github.io`;
 const basePath = isGithubActions && !isUserSite && repository ? `/${repository}` : "";
 
 const nextConfig: NextConfig = {
