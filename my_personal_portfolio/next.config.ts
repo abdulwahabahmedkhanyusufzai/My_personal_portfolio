@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-const repository = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
+const repositoryParts = process.env.GITHUB_REPOSITORY?.split("/") ?? [];
+const repository = repositoryParts.length === 2 ? repositoryParts[1] : "";
 const isUserSite = repository.endsWith(".github.io");
 const basePath = isGithubActions && !isUserSite && repository ? `/${repository}` : "";
 
