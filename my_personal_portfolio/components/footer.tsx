@@ -1,5 +1,3 @@
-import { FaLocationArrow } from "react-icons/fa6";
-import MagicButton from "./ui/MagicButton";
 import { socialMedia, navItems } from "@/data";
 import Link from "next/link";
 
