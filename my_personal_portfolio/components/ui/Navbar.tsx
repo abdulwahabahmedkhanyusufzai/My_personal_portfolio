@@ -45,6 +45,12 @@ export const Navbar = () => {
               {item.name}
             </Link>
           ))}
+          <Link 
+            href="/resume" 
+            className="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-blue dark:hover:text-blue transition-colors border border-black/10 dark:border-white/10 px-3 py-1.5 rounded-md hover:bg-black/5 dark:hover:bg-white/5"
+          >
+            Resume
+          </Link>
           <ModeToggle />
         </div>
 
@@ -78,6 +84,13 @@ export const Navbar = () => {
               {item.name}
             </Link>
           ))}
+          <Link
+            href="/resume"
+            onClick={() => setIsOpen(false)}
+            className="text-lg font-medium text-blue"
+          >
+            View Resume
+          </Link>
         </div>
       </div>
     </nav>
