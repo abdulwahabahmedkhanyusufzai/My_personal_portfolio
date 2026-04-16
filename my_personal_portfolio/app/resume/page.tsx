@@ -3,14 +3,13 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { 
-  FaGithub, FaBookOpen, FaCode, FaStar, FaCodeFork, FaEye, 
-  FaLocationDot, FaLink, FaEnvelope, FaCalendarDays,
-  FaFileLines, FaFolder, FaCircle, FaArrowLeft, FaDownload,
-  FaBriefcase, FaGraduationCap
+import {
+  FaGithub, FaBookOpen, FaCode, FaStar, FaCodeFork, FaEye,
+  FaLocationDot, FaLink, FaEnvelope,
+  FaFileLines, FaFolder, FaCircle, FaBriefcase, FaGraduationCap
 } from "react-icons/fa6";
-import { GoRepo, GoGitCommit, GoGitBranch, GoLaw, GoIssueOpened, GoGitPullRequest, GoPlay, GoProject, GoGraph, GoGear } from "react-icons/go";
-import { navItems, workExperience, education, skillsData, socialMedia } from "@/data";
+import { GoRepo, GoIssueOpened, GoGitPullRequest, GoPlay, GoProject, GoGraph } from "react-icons/go";
+import { workExperience, education, skillsData } from "@/data";
 import { cn } from "@/app/lib/utils/cn";
 
 import { Navbar } from "@/components/ui/Navbar";
@@ -76,9 +75,9 @@ const GithubResume = () => {
         {/* Sidebar */}
         <div className="w-full lg:w-1/4 flex flex-col gap-4">
           <div className="relative w-full aspect-square rounded-full overflow-hidden border border-[#d0d7de] dark:border-[#30363d]">
-            <Image 
-              src="/my_picture.jpg" 
-              alt="Abdul Wahab" 
+            <Image
+              src="/my_picture.jpg"
+              alt="Abdul Wahab"
               fill
               className="object-cover"
             />
@@ -93,7 +92,7 @@ const GithubResume = () => {
           <p className="text-sm mt-2">
             Passionate software engineer building high-performance web applications and contributing to the future of AI.
           </p>
-          
+
           <div className="flex flex-col gap-2 mt-2 text-sm text-[#57606a] dark:text-[#8b949e]">
             <div className="flex items-center gap-2">
               <FaLocationDot /> Karachi, Pakistan
@@ -112,15 +111,15 @@ const GithubResume = () => {
           <div className="border-t border-[#d0d7de] dark:border-[#30363d] pt-4 mt-2">
             <h3 className="font-semibold text-[#24292f] dark:text-[#e6edf3]">Achievements</h3>
             <div className="flex gap-2 mt-2">
-               <div className="w-8 h-8 rounded-full border border-[#d0d7de] dark:border-[#30363d] flex items-center justify-center bg-[#f6f8fa] dark:bg-[#161b22]" title="Pull Shark">
-                  🦈
-               </div>
-               <div className="w-8 h-8 rounded-full border border-[#d0d7de] dark:border-[#30363d] flex items-center justify-center bg-[#f6f8fa] dark:bg-[#161b22]" title="Arctic Code Vault Contributor">
-                  ❄️
-               </div>
-               <div className="w-8 h-8 rounded-full border border-[#d0d7de] dark:border-[#30363d] flex items-center justify-center bg-[#f6f8fa] dark:bg-[#161b22]" title="YOLO">
-                  🏃
-               </div>
+              <div className="w-8 h-8 rounded-full border border-[#d0d7de] dark:border-[#30363d] flex items-center justify-center bg-[#f6f8fa] dark:bg-[#161b22]" title="Pull Shark">
+                🦈
+              </div>
+              <div className="w-8 h-8 rounded-full border border-[#d0d7de] dark:border-[#30363d] flex items-center justify-center bg-[#f6f8fa] dark:bg-[#161b22]" title="Arctic Code Vault Contributor">
+                ❄️
+              </div>
+              <div className="w-8 h-8 rounded-full border border-[#d0d7de] dark:border-[#30363d] flex items-center justify-center bg-[#f6f8fa] dark:bg-[#161b22]" title="YOLO">
+                🏃
+              </div>
             </div>
           </div>
         </div>
@@ -144,42 +143,42 @@ const GithubResume = () => {
 
             {/* File List */}
             <div className="flex flex-col">
-              <FileRow 
-                name="app" 
-                icon={<FaFolder className="text-[#54aeff] dark:text-[#8b949e]" />} 
-                commit="Initialize core architecture" 
-                date="2 months ago" 
+              <FileRow
+                name="app"
+                icon={<FaFolder className="text-[#54aeff] dark:text-[#8b949e]" />}
+                commit="Initialize core architecture"
+                date="2 months ago"
               />
-              <FileRow 
-                name="experience" 
-                icon={<FaFolder className="text-[#54aeff] dark:text-[#8b949e]" />} 
-                commit={`Add ${experienceCommit.company} experience`} 
-                date="2 weeks ago" 
+              <FileRow
+                name="experience"
+                icon={<FaFolder className="text-[#54aeff] dark:text-[#8b949e]" />}
+                commit={`Add ${experienceCommit.company} experience`}
+                date="2 weeks ago"
               />
-              <FileRow 
-                name="education" 
-                icon={<FaFolder className="text-[#54aeff] dark:text-[#8b949e]" />} 
-                commit="Update academic records" 
-                date="1 month ago" 
+              <FileRow
+                name="education"
+                icon={<FaFolder className="text-[#54aeff] dark:text-[#8b949e]" />}
+                commit="Update academic records"
+                date="1 month ago"
               />
-              <FileRow 
-                name="skills" 
-                icon={<FaFolder className="text-[#54aeff] dark:text-[#8b949e]" />} 
-                commit="Add AI/ML and Cloud stack" 
-                date="3 days ago" 
+              <FileRow
+                name="skills"
+                icon={<FaFolder className="text-[#54aeff] dark:text-[#8b949e]" />}
+                commit="Add AI/ML and Cloud stack"
+                date="3 days ago"
               />
-              <FileRow 
-                name="README.md" 
-                icon={<FaFileLines className="text-[#57606a] dark:text-[#8b949e]" />} 
-                commit="Update professional summary" 
-                date="yesterday" 
+              <FileRow
+                name="README.md"
+                icon={<FaFileLines className="text-[#57606a] dark:text-[#8b949e]" />}
+                commit="Update professional summary"
+                date="yesterday"
                 active
               />
-              <FileRow 
-                name="package.json" 
-                icon={<FaFileLines className="text-[#57606a] dark:text-[#8b949e]" />} 
-                commit="Bump version to 2026.4.16" 
-                date="today" 
+              <FileRow
+                name="package.json"
+                icon={<FaFileLines className="text-[#57606a] dark:text-[#8b949e]" />}
+                commit="Bump version to 2026.4.16"
+                date="today"
               />
             </div>
           </div>
@@ -190,16 +189,16 @@ const GithubResume = () => {
               <FaBookOpen className="text-[#57606a] dark:text-[#8b949e]" size={14} />
               <span className="font-semibold text-sm">README.md</span>
             </div>
-            
+
             <div className="p-10 prose dark:prose-invert max-w-none text-[#24292f] dark:text-[#c9d1d9]">
               <h1 className="border-b border-[#d0d7de] dark:border-[#30363d] pb-2 text-3xl font-bold mb-4 text-[#24292f] dark:text-[#e6edf3]">
                 Abdul Wahab Ahmed Khan
               </h1>
-              
+
               <div className="flex gap-2 mb-8">
-                 <Image src="https://img.shields.io/badge/MERN-Developer-blue?style=flat-square" alt="mern" width={110} height={20} unoptimized />
-                 <Image src="https://img.shields.io/badge/Open--Source-Contributor-brightgreen?style=flat-square" alt="os" width={140} height={20} unoptimized />
-                 <Image src="https://img.shields.io/badge/AI-Enthusiast-purple?style=flat-square" alt="ai" width={100} height={20} unoptimized />
+                <Image src="https://img.shields.io/badge/MERN-Developer-blue?style=flat-square" alt="mern" width={110} height={20} unoptimized />
+                <Image src="https://img.shields.io/badge/Open--Source-Contributor-brightgreen?style=flat-square" alt="os" width={140} height={20} unoptimized />
+                <Image src="https://img.shields.io/badge/AI-Enthusiast-purple?style=flat-square" alt="ai" width={100} height={20} unoptimized />
               </div>
 
               <h2 className="border-b border-[#d0d7de] dark:border-[#30363d] pb-1 text-2xl font-semibold mb-4 mt-8 flex items-center gap-2 text-[#24292f] dark:text-[#e6edf3]">
@@ -252,35 +251,35 @@ const GithubResume = () => {
 
           {/* Stats Bar */}
           <div className="border border-[#d0d7de] dark:border-[#30363d] rounded-md p-6 bg-white dark:bg-[#0d1117]">
-             <h3 className="font-semibold mb-4">Contribution Activity</h3>
-             <div className="flex flex-wrap gap-1">
-                {Array.from({ length: 52 }).map((_, i) => (
-                  <div key={i} className="flex flex-col gap-1">
-                    {Array.from({ length: 7 }).map((_, j) => {
-                      const level = Math.floor(Math.random() * 5);
-                      const darkColors = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'];
-                      const lightColors = ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'];
-                      return (
-                        <div 
-                          key={j} 
-                          className="w-3 h-3 rounded-sm" 
-                          style={{ backgroundColor: mounted && document.documentElement.classList.contains('dark') ? darkColors[level] : lightColors[level] }}
-                        />
-                      );
-                    })}
-                  </div>
-                ))}
-             </div>
-             <div className="flex justify-between items-center mt-4 text-xs text-[#57606a] dark:text-[#8b949e]">
-               <span>Learn how we count contributions</span>
-               <div className="flex items-center gap-1">
-                 Less <div className="w-3 h-3 rounded-sm bg-[#ebedf0] dark:bg-[#161b22]" />
-                 <div className="w-3 h-3 rounded-sm bg-[#9be9a8] dark:bg-[#0e4429]" />
-                 <div className="w-3 h-3 rounded-sm bg-[#40c463] dark:bg-[#006d32]" />
-                 <div className="w-3 h-3 rounded-sm bg-[#30a14e] dark:bg-[#26a641]" />
-                 <div className="w-3 h-3 rounded-sm bg-[#216e39] dark:bg-[#39d353]" /> More
-               </div>
-             </div>
+            <h3 className="font-semibold mb-4">Contribution Activity</h3>
+            <div className="flex flex-wrap gap-1">
+              {Array.from({ length: 52 }).map((_, i) => (
+                <div key={i} className="flex flex-col gap-1">
+                  {Array.from({ length: 7 }).map((_, j) => {
+                    const level = Math.floor(Math.random() * 5);
+                    const darkColors = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'];
+                    const lightColors = ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'];
+                    return (
+                      <div
+                        key={j}
+                        className="w-3 h-3 rounded-sm"
+                        style={{ backgroundColor: mounted && document.documentElement.classList.contains('dark') ? darkColors[level] : lightColors[level] }}
+                      />
+                    );
+                  })}
+                </div>
+              ))}
+            </div>
+            <div className="flex justify-between items-center mt-4 text-xs text-[#57606a] dark:text-[#8b949e]">
+              <span>Learn how we count contributions</span>
+              <div className="flex items-center gap-1">
+                Less <div className="w-3 h-3 rounded-sm bg-[#ebedf0] dark:bg-[#161b22]" />
+                <div className="w-3 h-3 rounded-sm bg-[#9be9a8] dark:bg-[#0e4429]" />
+                <div className="w-3 h-3 rounded-sm bg-[#40c463] dark:bg-[#006d32]" />
+                <div className="w-3 h-3 rounded-sm bg-[#30a14e] dark:bg-[#26a641]" />
+                <div className="w-3 h-3 rounded-sm bg-[#216e39] dark:bg-[#39d353]" /> More
+              </div>
+            </div>
           </div>
         </div>
       </main>
