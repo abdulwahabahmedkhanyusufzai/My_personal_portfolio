@@ -24,7 +24,7 @@ export default function ResumePage() {
               download
               className="flex items-center gap-2 bg-blue text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue/90 transition-colors shadow-lg shadow-blue/20"
             >
-              <HiplDownload />
+              <HiDownload />
               <span>Download PDF</span>
             </a>
           </div>
