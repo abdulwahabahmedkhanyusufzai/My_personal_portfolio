@@ -3,7 +3,7 @@ import { MagicCard } from "./ui/Card";
 import { GradualSpacing } from "./ui/GradualSpacing";
 import React from "react";
 import Image from "next/image";
-import { FaTrophy, FaMicrochip } from "react-icons/fa6";
+import { FaTrophy } from "react-icons/fa6";
 
 
 const Experience = () => {
