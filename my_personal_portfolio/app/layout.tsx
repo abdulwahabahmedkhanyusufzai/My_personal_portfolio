@@ -6,6 +6,9 @@ import { ThemeProvider } from "./provider";
 export const metadata: Metadata = {
   title: "Abdul Wahab's Portfolio",
   description: "Modern & Minimalistic JS Mastery Portfolio",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -14,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider
           attribute="class"
