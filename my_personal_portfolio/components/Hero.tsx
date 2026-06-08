@@ -30,7 +30,7 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-base lg:text-lg pt-2 text-neutral-600 dark:text-neutral-400 font-medium max-w-2xl leading-relaxed">
-            From intelligent product search to automated lead qualification, I architect custom AI workflows that eliminate friction. Accelerate your sales cycles and deliver instant, accurate responses to your customers around the clock.
+            I architect custom AI workflows that automate operations, eliminate friction, and accelerate your sales cycles.
           </p>
 
           <div className="flex gap-5 mt-2 md:mt-0 ">
