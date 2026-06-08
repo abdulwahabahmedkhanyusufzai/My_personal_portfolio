@@ -25,6 +25,8 @@ const config = {
     },
     extend: {
       fontFamily: {
+        sans: ["var(--font-plus-jakarta-sans)", "sans-serif"],
+        display: ["var(--font-space-grotesk)", "sans-serif"],
         cairo: ["cairo", "sans-serif"],
       },
       colors: {

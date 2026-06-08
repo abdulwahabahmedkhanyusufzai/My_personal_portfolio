@@ -12,7 +12,7 @@ const Grid = () => {
 
         <div className="w-full max-w-5xl mt-10">
           <MagicCard className="p-8 md:p-12" titleClassName="h-auto lg:min-h-fit">
-            <div className="flex gap-x-12 gap-y-10 flex-col items-center md:items-start text-center md:text-start md:flex-row w-full font-cairo">
+            <div className="flex gap-x-12 gap-y-10 flex-col items-center md:items-start text-center md:text-start md:flex-row w-full">
               {/* Profile Image */}
               <div className="relative flex-shrink-0">
                 <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>

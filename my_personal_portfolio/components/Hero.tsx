@@ -1,5 +1,4 @@
 import { FaLocationArrow } from "react-icons/fa6";
-import Link from "next/link";
 
 import MagicButton from "@/components/ui/MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerate";
@@ -17,38 +16,38 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex justify-center relative my-20 z-10">
+      <div className="flex justify-center relative mt-6 mb-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <div className="px-4 py-1.5 mb-4 rounded-full border border-brand-primary/20 bg-brand-primary/5 dark:bg-brand-primary/10 backdrop-blur-sm">
             <p className="uppercase tracking-[0.2em] text-[10px] md:text-xs text-center text-brand-primary dark:text-brand-primary/80 font-bold">
-              Backend Systems & ML Infrastructure
+              AI Workflows & Intelligent Systems
             </p>
           </div>
 
           <TextGenerateEffect
-            words="Architecting High-Performance Distributed Systems"
-            className="text-center text-[40px] md:text-5xl lg:text-7xl tracking-tighter text-brand-primary dark:text-brand-secondary"
+            words="Turn Operational Bottlenecks into Automated Revenue."
+            className="text-center text-[32px] md:text-4xl lg:text-5xl xl:text-6xl tracking-tighter text-brand-primary dark:text-brand-secondary"
           />
 
-          <p className="text-center md:tracking-wider mb-8 text-sm md:text-lg lg:text-2xl pt-4 text-neutral-600 dark:text-neutral-400 font-medium max-w-2xl leading-relaxed">
-            Hi! I&apos;m <span className="text-brand-primary dark:text-brand-secondary font-bold">Abdul Wahab Ahmed Khan</span>, a Software Engineer specialized in scalable backends and Scientific ML.
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-base lg:text-lg pt-2 text-neutral-600 dark:text-neutral-400 font-medium max-w-2xl leading-relaxed">
+            From intelligent product search to automated lead qualification, I architect custom AI workflows that eliminate friction. Accelerate your sales cycles and deliver instant, accurate responses to your customers around the clock.
           </p>
 
-          <div className="flex gap-5 mt-5 md:mt-0 ">
-            <a href="#about">
+          <div className="flex gap-5 mt-2 md:mt-0 ">
+            <a href="#contact">
               <MagicButton
-                title="Show my work"
+                title="Book a Call"
                 icon={<FaLocationArrow />}
                 position="right"
               />
             </a>
-            <Link href="/resume">
+            <a href="#projects">
               <MagicButton
-                title="View Resume"
+                title="View Live Demos"
                 icon={<FaLocationArrow />}
                 position="right"
               />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

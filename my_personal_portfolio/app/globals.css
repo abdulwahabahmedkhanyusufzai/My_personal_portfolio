@@ -76,7 +76,7 @@
 
 @layer utilities {
   .heading {
-    @apply font-bold text-4xl md:text-5xl text-center text-brand-text-light dark:text-brand-text-dark transition-colors duration-300;
+    @apply font-display font-bold text-4xl md:text-5xl text-center text-brand-text-light dark:text-brand-text-dark transition-colors duration-300;
   }
 
   .black-gradient {
@@ -84,6 +84,6 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply text-brand-text-light dark:text-brand-text-dark;
+    @apply text-brand-text-light dark:text-brand-text-dark font-display;
   }
 }
