@@ -111,7 +111,7 @@ export const projects = [
     img: "/b4.svg",
     iconLists: ["/next.svg", "/restapi.svg", "/pytorch.svg", "/app.svg", "/sql.png", "/dock.svg"],
     link: "https://github.com/abdulwahabahmedkhanyusufzai/omnichannel-ai-lead-orchestration",
-    demoLink: "",
+    demoLink: "https://ai.automationdev.app",
     caseStudy: {
       challenge: "Normalizing noisy and highly unstructured data from multi-channel streams (emails, chats) required real-time extraction and classification. The system also had to be highly cost-effective and deployable on low-spec 1vCPU/2GB hosts without OOM issues.",
       solution: "Developed an event-driven ingestion pipeline with n8n to aggregate multi-source webhooks into Supabase. Engineered a channel-aware FastAPI layer to normalize noisy payloads, paired with a PyTorch intent scoring engine utilizing feed-forward networks, and optimized edge host memory limits via custom SSD swap and tensor memory management.",
