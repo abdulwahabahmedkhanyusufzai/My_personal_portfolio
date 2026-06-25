@@ -21,10 +21,10 @@ const Education = () => {
                             >
                                 <div className="flex flex-col items-center text-center gap-6">
                                     <div className="flex flex-col items-center gap-2">
-                                        <h1 className="text-2xl md:text-4xl font-bold text-brand-primary dark:text-brand-secondary">
+                                        <h1 className="text-2xl md:text-3xl font-black text-neutral-900 dark:text-neutral-50">
                                             {edu.institution}
                                         </h1>
-                                        <p className="text-xl md:text-2xl font-semibold text-neutral-700 dark:text-neutral-300">
+                                        <p className="text-lg md:text-xl font-semibold text-neutral-600 dark:text-neutral-300">
                                             {edu.degree}
                                         </p>
                                         <div className="flex items-center gap-3 mt-2">

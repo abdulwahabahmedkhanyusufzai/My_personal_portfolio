@@ -6,7 +6,9 @@ import MySkills from "@/components/mySkills";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Experience from "@/components/Experience";
+import Achievements from "@/components/Achievements";
 import Education from "@/components/Education";
+
 export default function Home() {
   return (
     <main className="relative bg-white dark:bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
@@ -16,6 +18,7 @@ export default function Home() {
         <Hero />
         <Grid />
         <Experience />
+        <Achievements />
         <MySkills />
         <RecentProjects />
         <Education />
