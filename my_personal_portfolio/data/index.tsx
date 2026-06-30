@@ -106,9 +106,9 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Omnichannel AI Lead Orchestration & CRM",
+    title: "Real Estate Automation CRM",
     des: "Built distributed n8n pipelines and intent scoring models to aggregate multi-source streams, extracting entities and routing leads in real-time under tight host constraints.",
-    img: "/b4.svg",
+    img: "/Screenshot 2026-06-30 191859.png",
     iconLists: ["/next.svg", "/restapi.svg", "/pytorch.svg", "/app.svg", "/sql.png", "/dock.svg"],
     link: "https://github.com/abdulwahabahmedkhanyusufzai/omnichannel-ai-lead-orchestration",
     demoLink: "https://ai.automationdev.app",
