@@ -6,12 +6,36 @@ import { GradualSpacing } from "./ui/GradualSpacing";
 import React from "react";
 import { FaTrophy, FaMedal } from "react-icons/fa6";
 import { SiLeetcode, SiCodeforces, SiCodechef } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const platformIcons: Record<string, React.ComponentType<{ className?: string }>> = {
   LeetCode: SiLeetcode,
   CodeChef: SiCodechef,
   Codeforces: SiCodeforces,
   AtCoder: FaTrophy, // Fallback to Trophy if SiAtcoder isn't installed
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring" as const,
+      stiffness: 80,
+      damping: 15,
+    },
+  },
 };
 
 const Achievements = () => {
@@ -24,49 +48,62 @@ const Achievements = () => {
         
         {/* Competitive Programming Subsection */}
         <div>
-          <h3 className="text-xl md:text-2xl font-black text-neutral-900 dark:text-neutral-50 mb-6 border-l-4 border-brand-primary pl-3">
+          <h3 className="text-xl md:text-2xl font-black text-neutral-900 dark:text-neutral-50 mb-6 border-l-4 border-brand-primary pl-3 tracking-tight">
             Competitive Programming
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
             {competitiveProgramming.map((item) => {
               const Icon = platformIcons[item.platform] || FaTrophy;
               return (
-                <MagicCard
-                  key={item.id}
-                  className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800 hover:scale-[1.02] transition-transform duration-300"
-                  titleClassName="min-h-fit h-auto"
-                >
-                  <div className="flex flex-col p-5 gap-3 items-center text-center h-full justify-between">
-                    <div className="flex flex-col items-center gap-2">
-                      <div className="p-3 bg-neutral-100 dark:bg-slate-900 rounded-full text-brand-primary dark:text-brand-secondary">
-                        <Icon className="text-3xl" />
+                <motion.div key={item.id} variants={cardVariants} whileHover={{ y: -6 }} className="h-full">
+                  <MagicCard
+                    className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800 hover:shadow-lg transition-shadow duration-300 h-full"
+                    titleClassName="min-h-fit h-auto"
+                  >
+                    <div className="flex flex-col p-5 gap-3 items-center text-center h-full justify-between">
+                      <div className="flex flex-col items-center gap-2">
+                        <div className="p-3 bg-neutral-100 dark:bg-slate-900 rounded-full text-brand-primary dark:text-brand-secondary">
+                          <Icon className="text-3xl" />
+                        </div>
+                        <h4 className="text-lg font-black text-neutral-900 dark:text-neutral-50">
+                          {item.platform}
+                        </h4>
                       </div>
-                      <h4 className="text-lg font-black text-neutral-900 dark:text-neutral-50">
-                        {item.platform}
-                      </h4>
-                    </div>
 
-                    <div className="w-full">
-                      <div className="text-xs font-black uppercase px-2 py-1.5 rounded-lg bg-brand-primary/10 text-brand-primary dark:bg-brand-primary/20 dark:text-blue-400 border border-brand-primary/20 tracking-wider">
-                        {item.rank}
+                      <div className="w-full">
+                        <div className="text-xs font-black uppercase px-2 py-1.5 rounded-lg bg-brand-primary/10 text-brand-primary dark:bg-brand-primary/20 dark:text-blue-400 border border-brand-primary/20 tracking-wider">
+                          {item.rank}
+                        </div>
+                        <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-3 leading-relaxed">
+                          {item.desc}
+                        </p>
                       </div>
-                      <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-3 leading-relaxed">
-                        {item.desc}
-                      </p>
                     </div>
-                  </div>
-                </MagicCard>
+                  </MagicCard>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
 
         {/* Applied ML Section */}
         <div>
-          <h3 className="text-xl md:text-2xl font-black text-neutral-900 dark:text-neutral-50 mb-6 border-l-4 border-brand-secondary pl-3">
+          <h3 className="text-xl md:text-2xl font-black text-neutral-900 dark:text-neutral-50 mb-6 border-l-4 border-brand-secondary pl-3 tracking-tight">
             Applied ML & Kaggle Competitions
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
             {appliedML.map((item) => {
               // Styling for medals
               const isSilver = item.rank.toLowerCase().includes("silver");
@@ -84,40 +121,41 @@ const Achievements = () => {
               }
 
               return (
-                <MagicCard
-                  key={item.id}
-                  className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800 p-6 flex flex-col justify-between"
-                  titleClassName="min-h-fit h-auto"
-                >
-                  <div className="flex flex-col h-full justify-between gap-4">
-                    <div className="flex flex-col gap-2">
-                      <div className="flex items-center justify-between gap-2 border-b border-neutral-100 dark:border-slate-800/60 pb-3">
-                        <span className="text-[10px] font-black uppercase tracking-wider text-neutral-500 bg-neutral-100 dark:bg-slate-900 px-2 py-0.5 rounded">
-                          {item.category}
-                        </span>
+                <motion.div key={item.id} variants={cardVariants} whileHover={{ y: -6 }} className="h-full">
+                  <MagicCard
+                    className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800/80 p-6 flex flex-col justify-between h-full hover:shadow-lg transition-shadow duration-300"
+                    titleClassName="min-h-fit h-auto"
+                  >
+                    <div className="flex flex-col h-full justify-between gap-4">
+                      <div className="flex flex-col gap-2">
+                        <div className="flex items-center justify-between gap-2 border-b border-neutral-100 dark:border-slate-800/60 pb-3">
+                          <span className="text-[10px] font-black uppercase tracking-wider text-neutral-500 bg-neutral-100 dark:bg-slate-900 px-2 py-0.5 rounded">
+                            {item.category}
+                          </span>
+                        </div>
+                        
+                        {/* Card Heading - Better Black Color */}
+                        <h4 className="text-base font-black text-neutral-900 dark:text-neutral-50 leading-snug">
+                          {item.title}
+                        </h4>
                       </div>
-                      
-                      {/* Card Heading - Better Black Color */}
-                      <h4 className="text-base font-black text-neutral-900 dark:text-neutral-50 leading-snug">
-                        {item.title}
-                      </h4>
-                    </div>
 
-                    <div className="flex flex-col gap-3">
-                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                        {item.desc}
-                      </p>
+                      <div className="flex flex-col gap-3">
+                        <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                          {item.desc}
+                        </p>
 
-                      <div className={`flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg border ${badgeStyle} w-fit`}>
-                        {metalIcon}
-                        <span>{item.rank}</span>
+                        <div className={`flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg border ${badgeStyle} w-fit`}>
+                          {metalIcon}
+                          <span>{item.rank}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </MagicCard>
+                  </MagicCard>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
 
       </div>

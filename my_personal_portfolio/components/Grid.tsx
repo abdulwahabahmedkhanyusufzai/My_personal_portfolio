@@ -2,7 +2,7 @@ import React from 'react'
 import { GradualSpacing } from "./ui/GradualSpacing";
 import Image from 'next/image';
 import { aboutData } from '@/data';
-import { MagicCard } from './ui/Card';
+import { WobbleCard } from './ui/WobbleCard';
 
 const Grid = () => {
   return (
@@ -11,7 +11,7 @@ const Grid = () => {
         <GradualSpacing text="About Me" />
 
         <div className="w-full max-w-5xl mt-10">
-          <MagicCard className="p-8 md:p-12" titleClassName="h-auto lg:min-h-fit">
+          <WobbleCard containerClassName="p-8 md:p-12 bg-white dark:bg-[#000319] border-brand-primary/20 dark:border-white/10" className="h-auto lg:min-h-fit">
             <div className="flex gap-x-12 gap-y-10 flex-col items-center md:items-start text-center md:text-start md:flex-row w-full">
               {/* Profile Image */}
               <div className="relative flex-shrink-0">
@@ -55,7 +55,7 @@ const Grid = () => {
                 </div>
               </div>
             </div>
-          </MagicCard>
+          </WobbleCard>
         </div>
       </div>
     </section>
@@ -63,3 +63,4 @@ const Grid = () => {
 }
 
 export default Grid
+

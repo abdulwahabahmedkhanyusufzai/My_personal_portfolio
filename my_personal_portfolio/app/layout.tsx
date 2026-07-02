@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Abdul Wahab's Portfolio",
   description: "Modern & Minimalistic JS Mastery Portfolio",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/1777781647384.jpeg",
   },
 };
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { projects } from "@/data";
-import { MagicCard } from "./ui/Card";
+import { CardBody, CardContainer, CardItem } from "./ui/ThreeDCard";
 import { GradualSpacing } from "./ui/GradualSpacing";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,35 +31,47 @@ function ProjectCard({ project }: { project: ProjectType }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <MagicCard className="w-full h-full" titleClassName="min-h-fit h-auto">
-      <div className="flex flex-col w-full h-full hover:shadow-xl transition-shadow duration-500">
+    <CardContainer containerClassName="w-full py-2" className="w-full">
+      <CardBody className="w-full relative group/card dark:hover:shadow-2xl dark:hover:shadow-brand-secondary/[0.05] bg-white dark:bg-[#000319] border-neutral-200/80 dark:border-white/[0.1] rounded-3xl p-6 border flex flex-col h-full justify-between">
         
         {/* Fixed image height */}
-        <div className="relative w-full h-[200px] sm:h-[240px] md:h-[280px] rounded-lg overflow-hidden flex-shrink-0">
+        <CardItem
+          translateZ="50"
+          className="relative w-full h-[200px] sm:h-[240px] md:h-[280px] rounded-2xl overflow-hidden flex-shrink-0 mb-6"
+        >
           <Image
             src={project.img}
             alt={project.title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
-            className="rounded w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+            className="rounded-2xl w-full h-full object-cover transform group-hover/card:scale-105 transition-transform duration-500"
           />
-        </div>
+        </CardItem>
 
         {/* Project Details */}
-        <div className="p-5 flex flex-col flex-grow">
+        <div className="flex flex-col flex-grow">
           {/* Card Heading - Better Black Color in Light Mode, Crisp White in Dark Mode */}
-          <h2 className="text-xl md:text-2xl font-black text-neutral-900 dark:text-neutral-50 mb-3 tracking-tight">
+          <CardItem
+            translateZ="60"
+            className="text-xl md:text-2xl font-black text-neutral-900 dark:text-neutral-50 mb-3 tracking-tight"
+          >
             {project.title}
-          </h2>
+          </CardItem>
           
-          <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
+          <CardItem
+            translateZ="40"
+            className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4"
+          >
             {project.des}
-          </p>
+          </CardItem>
 
           {/* Collapsible Case Study Section */}
           {project.caseStudy && (
-            <div className="mb-5 border-t border-neutral-100 dark:border-slate-800/80 pt-4 mt-auto">
+            <CardItem
+              translateZ="30"
+              className="mb-5 border-t border-neutral-100 dark:border-slate-800/80 pt-4 mt-auto w-full"
+            >
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
                 className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-primary dark:text-brand-secondary hover:opacity-80 transition-opacity"
@@ -106,11 +118,14 @@ function ProjectCard({ project }: { project: ProjectType }) {
                   </div>
                 </div>
               </div>
-            </div>
+            </CardItem>
           )}
 
           {/* Icons and Links */}
-          <div className="flex justify-between items-center gap-x-3 mt-auto pt-4 border-t border-neutral-100 dark:border-slate-800/80">
+          <CardItem
+            translateZ="50"
+            className="flex justify-between items-center gap-x-3 mt-auto pt-4 border-t border-neutral-100 dark:border-slate-800/80 w-full"
+          >
             <div className="flex -space-x-1.5 overflow-hidden">
               {project.iconLists?.map((icon, index) => (
                 <div
@@ -144,10 +159,10 @@ function ProjectCard({ project }: { project: ProjectType }) {
                 </Link>
               )}
             </div>
-          </div>
+          </CardItem>
         </div>
-      </div>
-    </MagicCard>
+      </CardBody>
+    </CardContainer>
   );
 }
 
@@ -182,3 +197,4 @@ function Projects() {
 }
 
 export default Projects;
+
