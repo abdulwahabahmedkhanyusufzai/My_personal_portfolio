@@ -95,10 +95,10 @@ export const projects = [
     id: 1,
     title: "Scientific Image Forgery Detection API",
     des: "Engineered a high-performance REST microservice using FastAPI to serve a 344MB custom CNN-DINOv2 hybrid PyTorch model, enabling automated detection of manipulated scientific and medical images.",
-    img: "/p1.png",
+    img: "/Screenshot 2026-07-02 165820.png",
     iconLists: ["/pytorch.svg", "/restapi.svg", "/dock.svg", "/linux.svg", "/git.svg"],
     link: "https://github.com/abdulwahabahmedkhanyusufzai/scientific-image-forgery-detection",
-    demoLink: "",
+    demoLink: "https://forgey-ml.automationdev.app",
     caseStudy: {
       challenge: "Deploying a large 344MB PyTorch model on a strictly constrained 1vCPU / 2GB RAM cloud server risked constant kernel Out-Of-Memory (OOM) panics. Additionally, remote server synchronization struggled with Git LFS pointer corruption and slow container build cycles.",
       solution: "Provisioned and configured a custom 4GB SSD swap space to guarantee stable model initialization. Built a containerized deployment pipeline utilizing the uv package manager to achieve sub-20-second builds, and optimized inference by implementing Test-Time Augmentation (TTA) and adaptive Sobel morphological filtering for dynamic confidence thresholding.",
