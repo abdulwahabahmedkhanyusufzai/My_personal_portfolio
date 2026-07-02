@@ -9,9 +9,10 @@ import {
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { SiLeetcode, SiCodechef, SiCodeforces, SiKaggle } from "react-icons/si";
 
 import {
-  socialMedia, skillsData, projects,
+  skillsData, projects,
   workExperience, appliedML, competitiveProgramming, education,
   contactSchema
 } from "@/data";
@@ -362,7 +363,7 @@ export default function Home() {
                   </p>
 
                   <p className="text-[11px] sm:text-xs text-neutral-500 dark:text-neutral-400 mt-1.5 flex flex-wrap gap-x-2 gap-y-0.5 items-center font-medium">
-                    <span>1.4 Years+ Experience as AI Automation Engineer at Veltra AI Solutions</span>
+                    <span>1.4+ Years of Professional Experience | AI Automation Engineer at Veltra AI Solutions</span>
                     <span>&bull;</span>
                     <span>Open source contributor at TensorFlow</span>
                   </p>
@@ -406,40 +407,45 @@ export default function Home() {
                   href="https://leetcode.com/u/abdulwahabahmedkhanyusufzai/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[10px] font-bold px-2.5 py-1 bg-amber-500/10 border border-amber-500/20 rounded text-amber-700 dark:text-amber-400 hover:bg-amber-500/20 transition-all cursor-pointer"
+                  className="flex items-center gap-1.5 text-[10px] font-bold px-2.5 py-1 bg-amber-500/10 border border-amber-500/20 rounded text-amber-700 dark:text-amber-400 hover:bg-amber-500/20 transition-all cursor-pointer"
                 >
+                  <SiLeetcode size={11} />
                   LeetCode (Guardian 2235)
                 </a>
                 <a
                   href="https://www.codechef.com/users/abdulwahabusuf"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[10px] font-bold px-2.5 py-1 bg-red-500/10 border border-red-500/20 rounded text-red-700 dark:text-red-400 hover:bg-red-500/20 transition-all cursor-pointer"
+                  className="flex items-center gap-1.5 text-[10px] font-bold px-2.5 py-1 bg-red-500/10 border border-red-500/20 rounded text-red-700 dark:text-red-400 hover:bg-red-500/20 transition-all cursor-pointer"
                 >
+                  <SiCodechef size={11} />
                   CodeChef (6-Star 2231)
                 </a>
                 <a
                   href="https://codeforces.com/profile/abdulwahab121"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[10px] font-bold px-2.5 py-1 bg-blue-500/10 border border-blue-500/20 rounded text-blue-700 dark:text-blue-400 hover:bg-blue-500/20 transition-all cursor-pointer"
+                  className="flex items-center gap-1.5 text-[10px] font-bold px-2.5 py-1 bg-blue-500/10 border border-blue-500/20 rounded text-blue-700 dark:text-blue-400 hover:bg-blue-500/20 transition-all cursor-pointer"
                 >
+                  <SiCodeforces size={11} />
                   Codeforces (1477)
                 </a>
                 <a
                   href="https://atcoder.jp/users/abdulwahab121"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[10px] font-bold px-2.5 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded text-cyan-700 dark:text-cyan-400 hover:bg-cyan-500/20 transition-all cursor-pointer"
+                  className="flex items-center gap-1.5 text-[10px] font-bold px-2.5 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded text-cyan-700 dark:text-cyan-400 hover:bg-cyan-500/20 transition-all cursor-pointer"
                 >
+                  <svg width={11} height={11} viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.5 17.5v-11l8 5.5-8 5.5z"/></svg>
                   AtCoder (Cyan)
                 </a>
                 <a
                   href="https://www.kaggle.com/abdulwahab2321"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[10px] font-bold px-2.5 py-1 bg-purple-500/10 border border-purple-500/20 rounded text-purple-700 dark:text-purple-400 hover:bg-purple-500/20 transition-all cursor-pointer"
+                  className="flex items-center gap-1.5 text-[10px] font-bold px-2.5 py-1 bg-purple-500/10 border border-purple-500/20 rounded text-purple-700 dark:text-purple-400 hover:bg-purple-500/20 transition-all cursor-pointer"
                 >
+                  <SiKaggle size={11} />
                   Kaggle Expert (Top 1,195)
                 </a>
               </div>
@@ -458,18 +464,6 @@ export default function Home() {
                 >
                   <FaGithub /> View GitHub Resume
                 </Link>
-                <div className="flex items-center gap-2 ml-auto">
-                  {socialMedia.map((social) => (
-                    <Link
-                      key={social.id}
-                      href={social.link}
-                      target="_blank"
-                      className="p-2 border border-[#d0d7de] dark:border-[#30363d] rounded-full hover:bg-neutral-50 dark:hover:bg-[#21262d] transition-all text-neutral-700 dark:text-neutral-300 hover:text-brand-primary dark:hover:text-brand-secondary"
-                    >
-                      <social.icon size={16} />
-                    </Link>
-                  ))}
-                </div>
               </div>
             </div>
           </div>

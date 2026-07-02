@@ -1,6 +1,12 @@
 import { z } from "zod";
-import { FaFacebook, FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { SiLeetcode, SiCodeforces, SiKaggle, SiCodechef } from "react-icons/si";
+
+const AtCoderIcon = ({ size = 16 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.5 17.5v-11l8 5.5-8 5.5z"/>
+  </svg>
+);
 import { FaUser, FaBriefcase, FaGraduationCap, FaEnvelope, FaTrophy } from "react-icons/fa";
 
 export const navItems = [
@@ -322,22 +328,27 @@ export const socialMedia = [
   },
   {
     id: 2,
-    link: "https://www.linkedin.com/in/awahab1567",
-    icon: FaLinkedin,
-  },
-  {
-    id: 3,
-    link: "https://leetcode.com/u/abdulwahabyusufzai72/",
+    link: "https://leetcode.com/u/abdulwahabahmedkhanyusufzai/",
     icon: SiLeetcode,
   },
   {
+    id: 3,
+    link: "https://www.codechef.com/users/abdulwahabusuf",
+    icon: SiCodechef,
+  },
+  {
     id: 4,
-    link: "https://wa.me/+923428320022",
-    icon: FaWhatsapp,
+    link: "https://codeforces.com/profile/abdulwahab121",
+    icon: SiCodeforces,
   },
   {
     id: 5,
-    link: "https://www.kaggle.com/abdulwahabyusufzai",
+    link: "https://atcoder.jp/users/abdulwahab121",
+    icon: AtCoderIcon,
+  },
+  {
+    id: 6,
+    link: "https://www.kaggle.com/abdulwahab2321",
     icon: SiKaggle,
   },
 ];
