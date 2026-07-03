@@ -133,7 +133,7 @@ export const projects = [
     id: 3,
     title: "Distributed Patient Management System",
     des: "Designed a high-concurrency, zero-trust healthcare system with gRPC microservices, a RAG search assistant, and self-healing GitOps pipelines.",
-    img: "/Screenshot 2026-07-02 175050.png",
+    img: "/Screenshot 2026-07-03 175050.png",
     iconLists: ["/java.svg", "/dock.svg", "/cloud.svg", "/git.svg", "/sql.png"],
     link: "https://github.com/abdulwahabahmedkhanyusufzai/patient-management-system",
     demoLink: "",
