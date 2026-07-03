@@ -546,7 +546,7 @@ export default function Home() {
                   <p className="flex gap-2">
                     <span className="text-brand-primary">&bull;</span>
                     <span>
-                      <strong className="text-neutral-900 dark:text-neutral-100">PR #109131:</strong> Approved by TensorFlow maintainers and validated through TensorFlow CI and Google&apos;s internal <strong className="text-neutral-900 dark:text-neutral-100">Copybara</strong> verification pipeline; awaiting final merge.{" "}
+                      <strong className="text-neutral-900 dark:text-neutral-100">PR #109131:</strong> Merged by TensorFlow maintainers and validated through TensorFlow CI and Google&apos;s internal <strong className="text-neutral-900 dark:text-neutral-100">Copybara</strong> verification pipeline.{" "}
                       <a
                         href="https://github.com/tensorflow/tensorflow/pull/109131"
                         target="_blank"
