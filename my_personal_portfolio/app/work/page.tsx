@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer";
 
 export const metadata = {
   title: "Selected Work | Abdul Wahab",
-  description: "Systems-focused project portfolio, including scientific image forgery detection, AI automation SaaS, and distributed systems.",
+  description: "Systems-focused project portfolio, including scientific image forgery detection, pixxi CRM AI, and distributed systems.",
 };
 
 export default function Work() {
@@ -21,7 +21,7 @@ export default function Work() {
     },
     {
       num: "02",
-      title: "AI Automation SaaS",
+      title: "pixxi CRM AI",
       subtitle: "Multi-agent real estate operations orchestrator",
       desc: "Designed and deployed event-driven automation systems to process incoming leads and synchronize CRMs in real-time. Built a scalable multi-agent reasoning workflow using n8n and LangGraph, routing queries dynamically based on semantic intent and agent loads. Integrated voice synthesis and notification alerts.",
       stack: "FastAPI • n8n • LangGraph • Google Vertex AI • Gemini • PostgreSQL",
@@ -31,7 +31,7 @@ export default function Work() {
     },
     {
       num: "03",
-      title: "Distributed Patient Management System",
+      title: "Medicare Platform",
       subtitle: "High-throughput microservices healthcare architecture",
       desc: "Built a fully-observable Spring Boot microservices backend secured by Keycloak and HashiCorp Vault. Configured an Apache Kafka messaging backbone for asynchronous message ingestion and real-time patient status events. Integrated a pgvector semantic RAG search assistant to query structured clinical documents.",
       stack: "Spring Boot • Apache Kafka • Kubernetes • Istio • pgvector • Keycloak",
@@ -41,16 +41,6 @@ export default function Work() {
     },
     {
       num: "04",
-      title: "High-Concurrency AI Orchestrator",
-      subtitle: "Go-based parallel LLM task manager",
-      desc: "Engineered a low-overhead orchestrator in Go using custom goroutine worker pools and channels. Handles millions of daily API requests, executing rate-limited queries against OpenAI, Anthropic, and Gemini endpoints in parallel while preventing API exhaustion through dynamic back-pressure algorithms.",
-      stack: "Go • Docker • Google Cloud Run • Redis • Rate Limiting",
-      link: "https://github.com/abdulwahabahmedkhanyusufzai",
-      primaryLinkText: "GitHub &rarr;",
-      disabled: false
-    },
-    {
-      num: "05",
       title: "Distributed Media Streaming Platform",
       subtitle: "Scalable chunk-based streaming engine",
       desc: "Built a low-latency video streaming backend delivering optimized chunk-based media payloads. Configured JWT authentication pipelines, stateless API sessions, and database index optimization in PostgreSQL to handle high-concurrency watch-time queries.",

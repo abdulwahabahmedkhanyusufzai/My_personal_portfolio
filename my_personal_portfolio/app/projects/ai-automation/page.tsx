@@ -3,7 +3,7 @@ import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/footer";
 
 export const metadata = {
-  title: "Case Study: AI Automation SaaS | Abdul Wahab",
+  title: "Case Study: pixxi CRM AI | Abdul Wahab",
   description: "An in-depth look at building a multi-agent orchestration workflow to automate enterprise operations.",
 };
 
@@ -25,7 +25,7 @@ export default function AIAutomationCaseStudy() {
             
             <div className="space-y-2">
               <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl text-slate-900 dark:text-white">
-                Case Study: AI Automation SaaS
+                Case Study: pixxi CRM AI
               </h1>
               <p className="text-sm font-mono text-slate-500">
                 Multi-agent Orchestration for Real Estate Operations

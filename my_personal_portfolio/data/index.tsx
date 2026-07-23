@@ -112,7 +112,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Real Estate Automation CRM",
+    title: "pixxi CRM AI",
     des: "Built distributed n8n pipelines and intent scoring models to aggregate multi-source streams, extracting entities and routing leads in real-time under tight host constraints.",
     img: "/Screenshot 2026-07-02 083310.png",
     iconLists: ["/next.svg", "/restapi.svg", "/pytorch.svg", "/app.svg", "/sql.png", "/dock.svg"],
@@ -131,7 +131,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Distributed Patient Management System",
+    title: "Medicare Platform",
     des: "Designed a high-concurrency, zero-trust healthcare system with gRPC microservices, a RAG search assistant, and self-healing GitOps pipelines.",
     img: "/Screenshot 2026-07-03 175050.png",
     iconLists: ["/java.svg", "/dock.svg", "/cloud.svg", "/git.svg", "/sql.png"],
@@ -145,24 +145,6 @@ export const projects = [
         "Reduced administrative retrieval time by 80% via the Spring AI and PGVector search engine.",
         "Ensured 99.99% uptime with automated canary rollouts and ArgoCD pipelines.",
         "Validated fault tolerance with Chaos Mesh fault-injection and Resilience4j circuit breakers."
-      ]
-    }
-  },
-  {
-    id: 4,
-    title: "High-Concurrency AI Orchestrator",
-    des: "Engineered distributed orchestration in Go using worker pools to manage parallel LLM API workloads and maximize request throughput.",
-    img: "/p3.svg",
-    iconLists: ["/go.svg", "/dock.svg", "/linux.svg"],
-    link: "https://github.com/abdulwahabahmedkhanyusufzai/high-concurrency-ai-orchestrator",
-    demoLink: "",
-    caseStudy: {
-      challenge: "Handling bursty and high-volume parallel workloads to third-party LLM APIs requires strict concurrency control to avoid memory exhaustion, API rate-limit violations, and thread blockages.",
-      solution: "Engineered distributed execution pipelines in Go using optimized worker pools and thread-safe channels to manage parallel API workloads. Implemented custom rate-limiting queues and error-recovery retry mechanisms.",
-      results: [
-        "Maximized system throughput and request reliability under heavy load.",
-        "Guaranteed concurrency-safe pipelines utilizing Go channels for message passing.",
-        "Eliminated deadlocks and goroutine leaks during parallel LLM inference workloads."
       ]
     }
   }

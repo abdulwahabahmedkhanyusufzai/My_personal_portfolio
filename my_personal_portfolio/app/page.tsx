@@ -307,7 +307,7 @@ export default function Home() {
   if (!mounted) return null;
 
   return (
-    <main className="relative min-h-screen bg-[#f3f2ef] dark:bg-[#0d1117] text-[#24292f] dark:text-[#c9d1d9] font-sans pb-16 transition-colors duration-300">
+    <main className="relative min-h-screen bg-slate-50 dark:bg-slate-950 text-[#24292f] dark:text-[#c9d1d9] font-sans pb-16 transition-colors duration-300">
       {/* Background glowing beams */}
       <BackgroundBeams />
 
@@ -321,7 +321,7 @@ export default function Home() {
         <div className="w-full lg:w-3/4 flex flex-col gap-3">
           
           {/* Main LinkedIn Profile Card (Header & Intro) */}
-          <div id="profile-header" className="border border-[#d0d7de] dark:border-[#30363d] rounded-2xl overflow-hidden bg-white dark:bg-[#161b22] shadow-sm relative">
+          <div id="profile-header" className="premium-card overflow-hidden relative">
             
             {/* Banner Cover Photo */}
             <div className="h-32 sm:h-44 w-full bg-gradient-to-r from-blue-700 via-indigo-700 to-brand-secondary relative overflow-hidden">
@@ -332,7 +332,7 @@ export default function Home() {
             </div>
 
             {/* Profile Avatar overlapping cover */}
-            <div className="absolute top-16 sm:top-26 left-6 sm:left-8 z-10 size-32 sm:size-36 rounded-full border-4 border-white dark:border-[#161b22] overflow-hidden shadow-lg bg-slate-900 group">
+            <div className="absolute top-16 sm:top-26 left-6 sm:left-8 z-10 size-32 sm:size-36 rounded-full border-4 border-white dark:border-[#090d16] overflow-hidden shadow-lg bg-slate-900 group">
               <Image
                 src="/1777781647384.jpeg"
                 alt="Abdul Wahab Ahmed Khan"
@@ -469,7 +469,7 @@ export default function Home() {
           </div>
 
           {/* About Section */}
-          <div id="about" className="border border-[#d0d7de] dark:border-[#30363d] rounded-2xl bg-white dark:bg-[#161b22] p-5 sm:p-6 shadow-sm flex flex-col gap-3">
+          <div id="about" className="premium-card p-5 sm:p-6 flex flex-col gap-3">
             <h2 className="text-xl font-extrabold text-neutral-900 dark:text-neutral-50 tracking-tight">
               About
             </h2>
@@ -503,7 +503,7 @@ export default function Home() {
           </div>
 
           {/* Experience Section */}
-          <div id="experience" className="border border-[#d0d7de] dark:border-[#30363d] rounded-2xl bg-white dark:bg-[#161b22] p-6 sm:p-8 shadow-sm flex flex-col gap-6">
+          <div id="experience" className="premium-card p-6 sm:p-8 flex flex-col gap-6">
             <h2 className="text-xl font-extrabold text-neutral-900 dark:text-neutral-50 tracking-tight">
               Professional Experience
             </h2>
@@ -515,7 +515,7 @@ export default function Home() {
           </div>
 
           {/* Open Source Contributions Section */}
-          <div id="open-source" className="border border-[#d0d7de] dark:border-[#30363d] rounded-2xl bg-white dark:bg-[#161b22] p-5 sm:p-6 shadow-sm flex flex-col gap-4">
+          <div id="open-source" className="premium-card p-5 sm:p-6 flex flex-col gap-4">
             <h2 className="text-xl font-extrabold text-neutral-900 dark:text-neutral-50 tracking-tight">
               Open Source Contributions
             </h2>
@@ -563,7 +563,7 @@ export default function Home() {
           </div>
 
           {/* Projects / Repositories Section */}
-          <div id="projects" className="border border-[#d0d7de] dark:border-[#30363d] rounded-2xl bg-white dark:bg-[#161b22] p-6 sm:p-8 shadow-sm flex flex-col gap-6">
+          <div id="projects" className="premium-card p-6 sm:p-8 flex flex-col gap-6">
             <h2 className="text-xl font-extrabold text-neutral-900 dark:text-neutral-50 tracking-tight">
               Featured Projects
             </h2>
@@ -575,7 +575,7 @@ export default function Home() {
           </div>
 
           {/* Honors & Awards (Competitive & ML Achievements) */}
-          <div id="awards" className="border border-[#d0d7de] dark:border-[#30363d] rounded-2xl bg-white dark:bg-[#161b22] p-6 sm:p-8 shadow-sm flex flex-col gap-6">
+          <div id="awards" className="premium-card p-6 sm:p-8 flex flex-col gap-6">
             <h2 className="text-xl font-extrabold text-neutral-900 dark:text-neutral-50 tracking-tight">
               Honors & Awards
             </h2>
@@ -603,7 +603,7 @@ export default function Home() {
           </div>
 
           {/* Skills Section */}
-          <div id="skills" className="border border-[#d0d7de] dark:border-[#30363d] rounded-2xl bg-white dark:bg-[#161b22] p-6 sm:p-8 shadow-sm flex flex-col gap-6">
+          <div id="skills" className="premium-card p-6 sm:p-8 flex flex-col gap-6">
             <h2 className="text-xl font-extrabold text-neutral-900 dark:text-neutral-50 tracking-tight">
               Skills
             </h2>
@@ -623,7 +623,7 @@ export default function Home() {
                           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-semibold shadow-sm transition-all hover:-translate-y-0.5 active:translate-y-0 cursor-pointer ${
                             isEndorsed
                               ? "bg-brand-primary/15 border-brand-primary text-brand-primary dark:bg-brand-secondary/15 dark:border-brand-secondary dark:text-brand-secondary"
-                              : "bg-white dark:bg-[#161b22] border-[#d0d7de] dark:border-[#30363d] text-neutral-700 dark:text-neutral-300 hover:bg-[#f6f8fa] dark:hover:bg-[#21262d]"
+                              : "bg-white/50 dark:bg-slate-900/40 border-slate-200 dark:border-slate-800 text-neutral-700 dark:text-neutral-300 hover:bg-[#f6f8fa] dark:hover:bg-[#21262d]"
                           }`}
                         >
                           {skill.icon ? (
@@ -644,7 +644,7 @@ export default function Home() {
           </div>
 
           {/* Education Section */}
-          <div id="education" className="border border-[#d0d7de] dark:border-[#30363d] rounded-2xl bg-white dark:bg-[#161b22] p-6 sm:p-8 shadow-sm flex flex-col gap-4">
+          <div id="education" className="premium-card p-6 sm:p-8 flex flex-col gap-4">
             <h2 className="text-xl font-extrabold text-neutral-900 dark:text-neutral-50 tracking-tight">
               Education
             </h2>
@@ -684,7 +684,7 @@ export default function Home() {
           </div>
 
           {/* Contact (Send Note / Connect Form) */}
-          <div id="contact" className="border border-[#d0d7de] dark:border-[#30363d] rounded-2xl bg-white dark:bg-[#161b22] p-5 sm:p-6 shadow-sm flex flex-col gap-5">
+          <div id="contact" className="premium-card p-5 sm:p-6 flex flex-col gap-5">
             <div>
               <h2 className="text-xl font-extrabold text-neutral-900 dark:text-neutral-50 tracking-tight">
                 Connect & Message
@@ -814,7 +814,7 @@ export default function Home() {
         <div className="w-full lg:w-1/4 flex flex-col gap-3 lg:sticky lg:top-24 self-start">
           
           {/* Profile Navigation Sticky TOC Widget */}
-          <div className="border border-[#d0d7de] dark:border-[#30363d] rounded-2xl bg-white dark:bg-[#161b22] p-4 shadow-sm">
+          <div className="premium-card p-4">
             <h3 className="font-bold text-xs text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-3">
               Profile Navigation
             </h3>
@@ -855,7 +855,7 @@ export default function Home() {
           </div>
           
           {/* GitHub Style Contribution activity grid block */}
-          <div className="border border-[#d0d7de] dark:border-[#30363d] rounded-2xl p-4 bg-white dark:bg-[#161b22] shadow-sm flex flex-col gap-3">
+          <div className="premium-card p-4 flex flex-col gap-3">
             <h3 className="font-bold text-xs text-neutral-800 dark:text-[#e6edf3]">
               Contribution Activity
             </h3>
@@ -897,7 +897,7 @@ export default function Home() {
           </div>
 
           {/* People also viewed */}
-          <div className="border border-[#d0d7de] dark:border-[#30363d] rounded-2xl bg-white dark:bg-[#161b22] p-4 shadow-sm flex flex-col gap-4">
+          <div className="premium-card p-4 flex flex-col gap-4">
             <h3 className="font-bold text-sm text-neutral-900 dark:text-neutral-50 tracking-tight">
               People also viewed
             </h3>

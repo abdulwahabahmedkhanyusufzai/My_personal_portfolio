@@ -86,4 +86,8 @@
   h1, h2, h3, h4, h5, h6 {
     @apply text-brand-text-light dark:text-brand-text-dark font-display;
   }
+
+  .premium-card {
+    @apply border border-slate-200/80 dark:border-slate-800/60 rounded-2xl bg-white/80 dark:bg-[#090d16]/75 backdrop-blur-xl shadow-sm hover:shadow-2xl hover:shadow-indigo-500/5 dark:hover:shadow-brand-secondary/10 hover:border-brand-primary/40 dark:hover:border-brand-secondary/40 transition-all duration-500;
+  }
 }
