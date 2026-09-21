@@ -363,7 +363,7 @@ export default function Home() {
                   </p>
 
                   <p className="text-[11px] sm:text-xs text-neutral-500 dark:text-neutral-400 mt-1.5 flex flex-wrap gap-x-2 gap-y-0.5 items-center font-medium">
-                    <span>1.4+ Years of Professional Experience | AI Automation Engineer at Veltra AI Solutions</span>
+                    <span>1.5+ Years of Professional Experience | Backend Engineer at Xentric AI</span>
                     <span>&bull;</span>
                     <span>Open source contributor at TensorFlow</span>
                   </p>
@@ -373,9 +373,9 @@ export default function Home() {
                 <div className="flex flex-col gap-2.5 text-[11px] font-bold text-neutral-800 dark:text-neutral-200">
                   <div className="flex items-center gap-2">
                     <div className="relative size-6 rounded-md overflow-hidden bg-white border border-neutral-200/50 p-0.5 flex-shrink-0">
-                      <Image src="/277720484.jpeg" alt="Veltra" fill className="object-contain" />
+                      <Image src="/xentric_ai.png" alt="Xentric AI" fill className="object-contain" />
                     </div>
-                    <span className="hover:underline cursor-pointer">Veltra AI Solution UK</span>
+                    <span className="hover:underline cursor-pointer">Xentric AI</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="relative size-6 rounded-full overflow-hidden bg-brand-primary/10 text-brand-primary flex items-center justify-center border border-brand-primary/10 flex-shrink-0">

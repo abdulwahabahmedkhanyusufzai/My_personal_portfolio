@@ -153,11 +153,25 @@ export const projects = [
 export const workExperience = [
   {
     id: 1,
+    title: "Backend Engineer",
+    company: "Xentric AI",
+    thumbnail: "/xentric_ai.png",
+    location: "Full Remote, Canada",
+    date: "Aug 2026 – Present",
+    desc: [
+      "Architecting and maintaining scalable backend microservices and event-driven distributed pipelines using FastAPI, PostgreSQL, and Redis to power real-time conversational AI sales engines.",
+      "Engineering high-concurrency webhook ingestion pipelines, message brokers, and asynchronous worker queues to handle multi-channel lead qualification and CRM synchronization across distributed services.",
+      "Optimizing database queries, caching strategies, and API latency, ensuring fault-tolerant execution and sub-second response times across cloud infrastructure."
+    ],
+    className: "md:col-span-2",
+  },
+  {
+    id: 2,
     title: "AI Automation Engineer",
     company: "Veltra AI Solution UK",
     thumbnail: "/277720484.jpeg",
     location: "Remote",
-    date: "Mar 2025 – Present",
+    date: "Apr 2026 – Aug 2026",
     desc: [
       "Automated end-to-end real estate operations—including lead qualification and CRM synchronization—eliminating 100% of manual data entry by architecting event-driven systems using n8n, Google Vertex AI, and Gemini.",
       "Accelerated enterprise sales cycles and client response times to near-zero latency by building scalable, multi-agent reasoning workflows integrated with ElevenLabs, Telegram, and custom LLM routing APIs.",
@@ -166,7 +180,7 @@ export const workExperience = [
     className: "md:col-span-2",
   },
   {
-    id: 2,
+    id: 3,
     title: "Full Stack Developer",
     company: "QF Network",
     thumbnail: "/qf_network.png",
